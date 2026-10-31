@@ -1,0 +1,1294 @@
+No PMIx server was reachable, but a PMI1/2 was detected.
+If srun is being used to launch application,  4 singletons will be started.
+LAMMPS (29 Aug 2024 - Update 2)
+LAMMPS (29 Aug 2024 - Update 2)
+LAMMPS (29 Aug 2024 - Update 2)
+LAMMPS (29 Aug 2024 - Update 2)
+Reading data file ...
+  orthogonal box = (0 0 -2000) to (100 100 2000)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  4587 atoms
+  reading velocities ...
+  4587 velocities
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     0 = max # of 1-2 neighbors
+     0 = max # of 1-3 neighbors
+     0 = max # of 1-4 neighbors
+     1 = max # of special neighbors
+  special bonds CPU = 0.000 seconds
+  read_data CPU = 0.019 seconds
+4116 atoms in group target
+471 atoms in group projectile
+1372 atoms in group l1
+1372 atoms in group l2
+1372 atoms in group l3
+Displacing atoms ...
+1455 atoms in group edge_raw
+1455 atoms in group edge
+Reading rebo potential file ../potentials/CH.rebo with DATE: 2018-7-3
+Reading rebo potential file ../potentials/CH.rebo with DATE: 2018-7-3
+Reading kolmogorov/crespi/z potential file ../potentials/CC.KC with DATE: 2017-02-28
+Reading kolmogorov/crespi/z potential file ../potentials/CC.KC with DATE: 2017-02-28
+Reading kolmogorov/crespi/z potential file ../potentials/CC.KC with DATE: 2017-02-28
+WARNING: 2 of 20000 force values in table CC_LJ_TAIL are inconsistent with -dE/dr.
+WARNING:  Should only be flagged at inflection points (src/pair_table.cpp:466)
+WARNING: 2 of 20000 force values in table CC_LJ_TAIL are inconsistent with -dE/dr.
+WARNING:  Should only be flagged at inflection points (src/pair_table.cpp:466)
+WARNING: 2 of 20000 force values in table CC_LJ_TAIL are inconsistent with -dE/dr.
+WARNING:  Should only be flagged at inflection points (src/pair_table.cpp:466)
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 10000, page size: 100000
+  master list distance cutoff = 18
+  ghost atom cutoff = 20
+  binsize = 9, bins = 12 12 445
+  6 neighbor lists, perpetual/occasional/extra = 6 0 0
+  (1) pair rebo, perpetual, skip from (6)
+      attributes: full, newton on, ghost
+      pair build: skip/ghost
+      stencil: none
+      bin: none
+  (2) pair rebo, perpetual, skip from (6)
+      attributes: full, newton on, ghost
+      pair build: skip/ghost
+      stencil: none
+      bin: none
+  (3) pair zbl, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d
+      bin: standard
+  (4) pair kolmogorov/crespi/z, perpetual, skip from (3)
+      attributes: half, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (5) pair table, perpetual, skip from (3)
+      attributes: half, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (6) neighbor class addition, perpetual
+      attributes: full, newton on, ghost
+      pair build: full/bin/ghost
+      stencil: full/ghost/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 43.77 | 43.77 | 43.77 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+         0   0              14305.543     -32689.857     -18384.314      97.62911       14207.913      14188.722      19.191778     -220          
+Loop time of 4.17e-07 on 1 procs for 0 steps with 4587 atoms
+
+239.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Bond    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 4.17e-07   |            |       |100.00
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             23 ave          23 max          23 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.30955e+06 ave 1.30955e+06 max 1.30955e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1309549
+Ave neighs/atom = 285.49139
+Ave special neighs/atom = 0
+Neighbor list builds = 0
+Dangerous builds = 0
+INITIAL p2f_threshold_R0_L1_v22000_s71002_8c5bdf -18384.314305168500141 14207.913426675666415 97.629110386416016354 -32689.856842230576149 14188.721649064200392 19.191777611466001474
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 43.77 | 43.77 | 43.77 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+         0   0              14305.543     -32689.857     -18384.314      97.62911       14207.913      14188.722      19.191778     -220          
+Loop time of 4.17e-07 on 1 procs for 0 steps with 4587 atoms
+
+239.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Bond    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 4.17e-07   |            |       |100.00
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             23 ave          23 max          23 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.30955e+06 ave 1.30955e+06 max 1.30955e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1309549
+Ave neighs/atom = 285.49139
+Ave special neighs/atom = 0
+Neighbor list builds = 0
+Dangerous builds = 0
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 45.7 | 45.7 | 45.7 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+         0   0              14305.543     -32689.857     -18384.314      97.62911       14207.913      14188.722      19.191778     -220          
+       500   0.05           14307.036     -32691.35      -18384.314      99.54468       14207.491      14188.722      18.769053     -220          
+      1000   0.1            14151.401     -32535.713     -18384.312      130.09958      14021.302      13966.903      54.398782     -218.27305    
+      1500   0.15           11241.1       -29625.06      -18383.96       3600.7858      7640.3144      5904.3445      1735.9699     -141.89986    
+      2000   0.2            10360.502     -28744.493     -18383.992      5731.381       4629.1207      3150.5545      1478.5662     -103.65217    
+      2500   0.25           10391.777     -28775.83      -18384.053      6133.4971      4258.2799      2890.1319      1368.1481     -99.285541    
+      2577   0.2577         10289.219     -28673.263     -18384.043      6090.4966      4198.7229      2885.3884      1313.3345     -99.205067    
+Loop time of 68.5346 on 1 procs for 2577 steps with 4587 atoms
+
+Performance: 0.325 ns/day, 73.874 hours/ns, 37.601 timesteps/s, 172.478 katom-step/s
+99.7% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 64.454     | 64.454     | 64.454     |   0.0 | 94.05
+Bond    | 0.00013988 | 0.00013988 | 0.00013988 |   0.0 |  0.00
+Neigh   | 3.9337     | 3.9337     | 3.9337     |   0.0 |  5.74
+Comm    | 0.0052726  | 0.0052726  | 0.0052726  |   0.0 |  0.01
+Output  | 0.010829   | 0.010829   | 0.010829   |   0.0 |  0.02
+Modify  | 0.10831    | 0.10831    | 0.10831    |   0.0 |  0.16
+Other   |            | 0.02276    |            |       |  0.03
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             21 ave          21 max          21 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.24652e+06 ave 1.24652e+06 max 1.24652e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1246517
+Ave neighs/atom = 271.74995
+Ave special neighs/atom = 0
+Neighbor list builds = 62
+Dangerous builds = 0
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 2577
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 48.75 | 48.75 | 48.75 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+      2577   0.2577         10289.219     -28673.263     -18384.043      6090.4966      4198.7229      2885.3884      1313.3345     -99.205067    
+      3000   0.3            10143.598     -28527.636     -18384.038      5987.877       4155.7205      2832.8839      1322.8366     -98.301514    
+      3500   0.35           10133.138     -28517.127     -18383.989      6014.2522      4118.8857      2852.4682      1266.4176     -98.636194    
+      4000   0.4            10113.533     -28497.534     -18384.001      6064.4735      4049.0595      2773.786       1275.2735     -97.260359    
+      4500   0.45           9896.6842     -28280.686     -18384.001      5913.8575      3982.8267      2756.1541      1226.6726     -96.95102     
+      5000   0.5            9783.6593     -28167.639     -18383.98       5793.7352      3989.9241      2765.2987      1224.6253     -97.092572    
+      5500   0.55           9660.685      -28044.621     -18383.936      5664.3278      3996.3572      2774.3328      1222.0244     -97.259487    
+      6000   0.6            9590.9003     -27974.848     -18383.947      5645.4765      3945.4238      2763.3849      1182.0389     -97.060374    
+      6500   0.65           9568.6229     -27952.585     -18383.962      5647.5372      3921.0857      2764.144       1156.9416     -97.072147    
+      7000   0.7            9615.1677     -27999.141     -18383.974      5672.4321      3942.7356      2745.7957      1196.9399     -96.748156    
+      7500   0.75           9662.0706     -28046.073     -18384.003      5755.5598      3906.5109      2746.9874      1159.5235     -96.771078    
+      8000   0.8            9653.5805     -28037.585     -18384.004      5712.2112      3941.3693      2727.4574      1213.9119     -96.432056    
+      8500   0.85           9645.0675     -28029.083     -18384.015      5704.4266      3940.6409      2740.9652      1199.6757     -96.673865    
+      9000   0.9            9622.6919     -28006.695     -18384.003      5689.9664      3932.7255      2734.826       1197.8995     -96.561826    
+      9500   0.95           9636.2806     -28020.277     -18383.996      5717.048       3919.2326      2738.7643      1180.4683     -96.628679    
+     10000   1              9639.3862     -28023.347     -18383.961      5723.8562      3915.53        2750.9918      1164.5382     -96.845272    
+     10500   1.05           9632.0695     -28016.039     -18383.969      5719.9199      3912.1496      2739.1337      1173.0159     -96.640296    
+     11000   1.1            9589.5157     -27973.495     -18383.98       5694.8954      3894.6203      2742.1598      1152.4605     -96.697582    
+     11500   1.15           9606.5616     -27990.54      -18383.979      5686.3175      3920.244       2748.4155      1171.8286     -96.808698    
+     12000   1.2            9606.9879     -27990.961     -18383.973      5694.4907      3912.4972      2741.8639      1170.6332     -96.693178    
+     12500   1.25           9575.122      -27959.088     -18383.966      5664.1436      3910.9784      2753.5473      1157.4311     -96.89718     
+     13000   1.3            9564.5366     -27948.53      -18383.993      5665.2453      3899.2913      2751.251       1148.0403     -96.85818     
+     13500   1.35           9556.9749     -27940.963     -18383.988      5689.1072      3867.8677      2740.6384      1127.2293     -96.67144     
+     14000   1.4            9509.967      -27893.951     -18383.984      5637.0404      3872.9266      2734.5096      1138.417      -96.560626    
+     14500   1.45           9596.4926     -27980.49      -18383.997      5701.2243      3895.2683      2729.6539      1165.6144     -96.474954    
+     15000   1.5            9538.57       -27922.562     -18383.992      5665.3369      3873.2331      2732.2862      1140.9469     -96.524547    
+     15500   1.55           9570.2773     -27954.29      -18384.013      5680.3989      3889.8784      2717.5899      1172.2885     -96.25571     
+     16000   1.6            9569.1591     -27953.155     -18383.996      5700.0129      3869.1463      2720.7406      1148.4056     -96.313535    
+     16500   1.65           9563.3232     -27947.315     -18383.992      5675.4599      3887.8633      2716.2611      1171.6022     -96.233451    
+     17000   1.7            9541.3582     -27925.359     -18384.001      5660.8366      3880.5216      2732.2286      1148.293      -96.516494    
+     17500   1.75           9519.7628     -27903.758     -18383.995      5625.5803      3894.1825      2737.8011      1156.3815     -96.618672    
+     18000   1.8            9510.4753     -27894.476     -18384.001      5643.7487      3866.7266      2742.5929      1124.1336     -96.705241    
+     18500   1.85           9529.36       -27913.389     -18384.029      5641.7884      3887.5716      2741.3883      1146.1833     -96.685099    
+     19000   1.9            9518.3312     -27902.379     -18384.048      5633.0405      3885.2907      2736.4148      1148.8759     -96.593824    
+     19500   1.95           9497.6932     -27881.727     -18384.034      5612.4844      3885.2088      2735.8851      1149.3237     -96.582499    
+     20000   2              9522.9579     -27906.997     -18384.039      5628.9703      3893.9876      2742.0309      1151.9567     -96.693386    
+     20500   2.05           9489.2488     -27873.278     -18384.029      5614.1022      3875.1466      2743.2004      1131.9462     -96.712001    
+     21000   2.1            9498.5525     -27882.566     -18384.014      5624.8182      3873.7343      2739.4405      1134.2938     -96.64347     
+     21500   2.15           9508.7031     -27892.731     -18384.028      5655.6808      3853.0224      2731.4667      1121.5557     -96.506204    
+     22000   2.2            9515.3977     -27899.406     -18384.008      5653.5033      3861.8945      2733.5843      1128.3101     -96.541518    
+     22500   2.25           9485.2802     -27869.296     -18384.016      5616.6737      3868.6065      2725.0931      1143.5134     -96.394067    
+     23000   2.3            9476.8097     -27860.823     -18384.014      5611.5808      3865.2289      2724.6765      1140.5524     -96.386601    
+     23500   2.35           9517.4617     -27901.484     -18384.022      5655.853       3861.6087      2725.2455      1136.3632     -96.396934    
+     24000   2.4            9497.8553     -27881.855     -18384          5632.9778      3864.8775      2733.682       1131.1955     -96.547974    
+     24500   2.45           9516.0436     -27900.05      -18384.006      5660.008       3856.0357      2731.8966      1124.1391     -96.516346    
+     25000   2.5            9513.0856     -27897.089     -18384.004      5645.6359      3867.4497      2733.1697      1134.2799     -96.540719    
+     25500   2.55           9505.9834     -27889.997     -18384.014      5647.4453      3858.5381      2730.6581      1127.88       -96.49627     
+     26000   2.6            9496.7264     -27880.731     -18384.005      5646.0086      3850.7178      2731.8708      1118.8471     -96.516698    
+     26500   2.65           9506.8435     -27890.851     -18384.007      5645.7446      3861.0988      2744.6248      1116.474      -96.739968    
+     27000   2.7            9495.1621     -27879.186     -18384.024      5616.296       3878.8661      2741.1974      1137.6688     -9Reading data file ...
+  orthogonal box = (0 0 -2000) to (100 100 2000)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  4587 atoms
+  reading velocities ...
+  4587 velocities
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     0 = max # of 1-2 neighbors
+     0 = max # of 1-3 neighbors
+     0 = max # of 1-4 neighbors
+     1 = max # of special neighbors
+  special bonds CPU = 0.000 seconds
+  read_data CPU = 0.019 seconds
+4116 atoms in group target
+471 atoms in group projectile
+1372 atoms in group l1
+1372 atoms in group l2
+1372 atoms in group l3
+Displacing atoms ...
+1455 atoms in group edge_raw
+1455 atoms in group edge
+Reading rebo potential file ../potentials/CH.rebo with DATE: 2018-7-3
+Reading rebo potential file ../potentials/CH.rebo with DATE: 2018-7-3
+Reading kolmogorov/crespi/z potential file ../potentials/CC.KC with DATE: 2017-02-28
+Reading kolmogorov/crespi/z potential file ../potentials/CC.KC with DATE: 2017-02-28
+Reading kolmogorov/crespi/z potential file ../potentials/CC.KC with DATE: 2017-02-28
+WARNING: 2 of 20000 force values in table CC_LJ_TAIL are inconsistent with -dE/dr.
+WARNING:  Should only be flagged at inflection points (src/pair_table.cpp:466)
+WARNING: 2 of 20000 force values in table CC_LJ_TAIL are inconsistent with -dE/dr.
+WARNING:  Should only be flagged at inflection points (src/pair_table.cpp:466)
+WARNING: 2 of 20000 force values in table CC_LJ_TAIL are inconsistent with -dE/dr.
+WARNING:  Should only be flagged at inflection points (src/pair_table.cpp:466)
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 10000, page size: 100000
+  master list distance cutoff = 18
+  ghost atom cutoff = 20
+  binsize = 9, bins = 12 12 445
+  6 neighbor lists, perpetual/occasional/extra = 6 0 0
+  (1) pair rebo, perpetual, skip from (6)
+      attributes: full, newton on, ghost
+      pair build: skip/ghost
+      stencil: none
+      bin: none
+  (2) pair rebo, perpetual, skip from (6)
+      attributes: full, newton on, ghost
+      pair build: skip/ghost
+      stencil: none
+      bin: none
+  (3) pair zbl, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d
+      bin: standard
+  (4) pair kolmogorov/crespi/z, perpetual, skip from (3)
+      attributes: half, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (5) pair table, perpetual, skip from (3)
+      attributes: half, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (6) neighbor class addition, perpetual
+      attributes: full, newton on, ghost
+      pair build: full/bin/ghost
+      stencil: full/ghost/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 43.77 | 43.77 | 43.77 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+         0   0              14305.543     -32689.857     -18384.314      97.62911       14207.913      14188.722      19.191778     -220          
+Loop time of 4.17e-07 on 1 procs for 0 steps with 4587 atoms
+
+239.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Bond    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 4.17e-07   |            |       |100.00
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             23 ave          23 max          23 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.30955e+06 ave 1.30955e+06 max 1.30955e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1309549
+Ave neighs/atom = 285.49139
+Ave special neighs/atom = 0
+Neighbor list builds = 0
+Dangerous builds = 0
+INITIAL p2f_threshold_R0_L1_v22000_s71002_8c5bdf -18384.314305168500141 14207.913426675666415 97.629110386416016354 -32689.856842230576149 14188.721649064200392 19.191777611466001474
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 43.77 | 43.77 | 43.77 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+         0   0              14305.543     -32689.857     -18384.314      97.62911       14207.913      14188.722      19.191778     -220          
+Loop time of 5.41e-07 on 1 procs for 0 steps with 4587 atoms
+
+0.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Bond    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 5.41e-07   |            |       |100.00
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             23 ave          23 max          23 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.30955e+06 ave 1.30955e+06 max 1.30955e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1309549
+Ave neighs/atom = 285.49139
+Ave special neighs/atom = 0
+Neighbor list builds = 0
+Dangerous builds = 0
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 45.7 | 45.7 | 45.7 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+         0   0              14305.543     -32689.857     -18384.314      97.62911       14207.913      14188.722      19.191778     -220          
+       500   0.05           14307.036     -32691.35      -18384.314      99.54468       14207.491      14188.722      18.769053     -220          
+      1000   0.1            14151.401     -32535.713     -18384.312      130.09958      14021.302      13966.903      54.398782     -218.27305    
+      1500   0.15           11241.1       -29625.06      -18383.96       3600.7858      7640.3144      5904.3445      1735.9699     -141.89986    
+      2000   0.2            10360.502     -28744.493     -18383.992      5731.381       4629.1207      3150.5545      1478.5662     -103.65217    
+      2500   0.25           10391.777     -28775.83      -18384.053      6133.4971      4258.2799      2890.1319      1368.1481     -99.285541    
+      2577   0.2577         10289.219     -28673.263     -18384.043      6090.4966      4198.7229      2885.3884      1313.3345     -99.205067    
+Loop time of 68.5266 on 1 procs for 2577 steps with 4587 atoms
+
+Performance: 0.325 ns/day, 73.866 hours/ns, 37.606 timesteps/s, 172.498 katom-step/s
+99.7% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 64.428     | 64.428     | 64.428     |   0.0 | 94.02
+Bond    | 0.00013211 | 0.00013211 | 0.00013211 |   0.0 |  0.00
+Neigh   | 3.9508     | 3.9508     | 3.9508     |   0.0 |  5.77
+Comm    | 0.005173   | 0.005173   | 0.005173   |   0.0 |  0.01
+Output  | 0.011209   | 0.011209   | 0.011209   |   0.0 |  0.02
+Modify  | 0.10785    | 0.10785    | 0.10785    |   0.0 |  0.16
+Other   |            | 0.02301    |            |       |  0.03
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             21 ave          21 max          21 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.24652e+06 ave 1.24652e+06 max 1.24652e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1246517
+Ave neighs/atom = 271.74995
+Ave special neighs/atom = 0
+Neighbor list builds = 62
+Dangerous builds = 0
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 2577
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 48.75 | 48.75 | 48.75 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+      2577   0.2577         10289.219     -28673.263     -18384.043      6090.4966      4198.7229      2885.3884      1313.3345     -99.205067    
+      3000   0.3            10143.598     -28527.636     -18384.038      5987.877       4155.7205      2832.8839      1322.8366     -98.301514    
+      3500   0.35           10133.138     -28517.127     -18383.989      6014.2522      4118.8857      2852.4682      1266.4176     -98.636194    
+      4000   0.4            10113.533     -28497.534     -18384.001      6064.4735      4049.0595      2773.786       1275.2735     -97.260359    
+      4500   0.45           9896.6842     -28280.686     -18384.001      5913.8575      3982.8267      2756.1541      1226.6726     -96.95102     
+      5000   0.5            9783.6593     -28167.639     -18383.98       5793.7352      3989.9241      2765.2987      1224.6253     -97.092572    
+      5500   0.55           9660.685      -28044.621     -18383.936      5664.3278      3996.3572      2774.3328      1222.0244     -97.259487    
+      6000   0.6            9590.9003     -27974.848     -18383.947      5645.4765      3945.4238      2763.3849      1182.0389     -97.060374    
+      6500   0.65           9568.6229     -27952.585     -18383.962      5647.5372      3921.0857      2764.144       1156.9416     -97.072147    
+      7000   0.7            9615.1677     -27999.141     -18383.974      5672.4321      3942.7356      2745.7957      1196.9399     -96.748156    
+      7500   0.75           9662.0706     -28046.073     -18384.003      5755.5598      3906.5109      2746.9874      1159.5235     -96.771078    
+      8000   0.8            9653.5805     -28037.585     -18384.004      5712.2112      3941.3693      2727.4574      1213.9119     -96.432056    
+      8500   0.85           9645.0675     -28029.083     -18384.015      5704.4266      3940.6409      2740.9652      1199.6757     -96.673865    
+      9000   0.9            9622.6919     -28006.695     -18384.003      5689.9664      3932.7255      2734.826       1197.8995     -96.561826    
+      9500   0.95           9636.2806     -28020.277     -18383.996      5717.048       3919.2326      2738.7643      1180.4683     -96.628679    
+     10000   1              9639.3862     -28023.347     -18383.961      5723.8562      3915.53        2750.9918      1164.5382     -96.845272    
+     10500   1.05           9632.0695     -28016.039     -18383.969      5719.9199      3912.1496      2739.1337      1173.0159     -96.640296    
+     11000   1.1            9589.5157     -27973.495     -18383.98       5694.8954      3894.6203      2742.1598      1152.4605     -96.697582    
+     11500   1.15           9606.5616     -27990.54      -18383.979      5686.3175      3920.244       2748.4155      1171.8286     -96.808698    
+     12000   1.2            9606.9879     -27990.961     -18383.973      5694.4907      3912.4972      2741.8639      1170.6332     -96.693178    
+     12500   1.25           9575.122      -27959.088     -18383.966      5664.1436      3910.9784      2753.5473      1157.4311     -96.89718     
+     13000   1.3            9564.5366     -27948.53      -18383.993      5665.2453      3899.2913      2751.251       1148.0403     -96.85818     
+     13500   1.35           9556.9749     -27940.963     -18383.988      5689.1072      3867.8677      2740.6384      1127.2293     -96.67144     
+     14000   1.4            9509.967      -27893.951     -18383.984      5637.0404      3872.9266      2734.5096      1138.417      -96.560626    
+     14500   1.45           9596.4926     -27980.49      -18383.997      5701.2243      3895.2683      2729.6539      1165.6144     -96.474954    
+     15000   1.5            9538.57       -27922.562     -18383.992      5665.3369      3873.2331      2732.2862      1140.9469     -96.524547    
+     15500   1.55           9570.2773     -27954.29      -18384.013      5680.3989      3889.8784      2717.5899      1172.2885     -96.25571     
+     16000   1.6            9569.1591     -27953.155     -18383.996      5700.0129      3869.1463      2720.7406      1148.4056     -96.313535    
+     16500   1.65           9563.3232     -27947.315     -18383.992      5675.4599      3887.8633      2716.2611      1171.6022     -96.233451    
+     17000   1.7            9541.3582     -27925.359     -18384.001      5660.8366      3880.5216      2732.2286      1148.293      -96.516494    
+     17500   1.75           9519.7628     -27903.758     -18383.995      5625.5803      3894.1825      2737.8011      1156.3815     -96.618672    
+     18000   1.8            9510.4753     -27894.476     -18384.001      5643.7487      3866.7266      2742.5929      1124.1336     -96.705241    
+     18500   1.85           9529.36       -27913.389     -18384.029      5641.7884      3887.5716      2741.3883      1146.1833     -96.685099    
+     19000   1.9            9518.3312     -27902.379     -18384.048      5633.0405      3885.2907      2736.4148      1148.8759     -96.593824    
+     19500   1.95           9497.6932     -27881.727     -18384.034      5612.4844      3885.2088      2735.8851      1149.3237     -96.582499    
+     20000   2              9522.9579     -27906.997     -18384.039      5628.9703      3893.9876      2742.0309      1151.9567     -96.693386    
+     20500   2.05           9489.2488     -27873.278     -18384.029      5614.1022      3875.1466      2743.2004      1131.9462     -96.712001    
+     21000   2.1            9498.5525     -27882.566     -18384.014      5624.8182      3873.7343      2739.4405      1134.2938     -96.64347     
+     21500   2.15           9508.7031     -27892.731     -18384.028      5655.6808      3853.0224      2731.4667      1121.5557     -96.506204    
+     22000   2.2            9515.3977     -27899.406     -18384.008      5653.5033      3861.8945      2733.5843      1128.3101     -96.541518    
+     22500   2.25           9485.2802     -27869.296     -18384.016      5616.6737      3868.6065      2725.0931      1143.5134     -96.394067    
+     23000   2.3            9476.8097     -27860.823     -18384.014      5611.5808      3865.2289      2724.6765      1140.5524     -96.386601    
+     23500   2.35           9517.4617     -27901.484     -18384.022      5655.853       3861.6087      2725.2455      1136.3632     -96.396934    
+     24000   2.4            9497.8553     -27881.855     -18384          5632.9778      3864.8775      2733.682       1131.1955     -96.547974    
+     24500   2.45           9516.0436     -27900.05      -18384.006      5660.008       3856.0357      2731.8966      1124.1391     -96.516346    
+     25000   2.5            9513.0856     -27897.089     -18384.004      5645.6359      3867.4497      2733.1697      1134.2799     -96.540719    
+     25500   2.55           9505.9834     -27889.997     -18384.014      5647.4453      3858.5381      2730.6581      1127.88       -96.49627     
+     26000   2.6            9496.7264     -27880.731     -18384.005      5646.0086      3850.7178      2731.8708      1118.8471     -96.516698    
+     26500   2.65           9506.8435     -27890.851     -18384.007      5645.7446      3861.0988      2744.6248      1116.474      -96.739968    
+     27000   2.7            9495.1621     -27879.186     -18384.024      5616.296       3878.8661      2741.1974      1137.6688     -96.Reading data file ...
+  orthogonal box = (0 0 -2000) to (100 100 2000)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  4587 atoms
+  reading velocities ...
+  4587 velocities
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     0 = max # of 1-2 neighbors
+     0 = max # of 1-3 neighbors
+     0 = max # of 1-4 neighbors
+     1 = max # of special neighbors
+  special bonds CPU = 0.000 seconds
+  read_data CPU = 0.019 seconds
+4116 atoms in group target
+471 atoms in group projectile
+1372 atoms in group l1
+1372 atoms in group l2
+1372 atoms in group l3
+Displacing atoms ...
+1455 atoms in group edge_raw
+1455 atoms in group edge
+Reading rebo potential file ../potentials/CH.rebo with DATE: 2018-7-3
+Reading rebo potential file ../potentials/CH.rebo with DATE: 2018-7-3
+Reading kolmogorov/crespi/z potential file ../potentials/CC.KC with DATE: 2017-02-28
+Reading kolmogorov/crespi/z potential file ../potentials/CC.KC with DATE: 2017-02-28
+Reading kolmogorov/crespi/z potential file ../potentials/CC.KC with DATE: 2017-02-28
+WARNING: 2 of 20000 force values in table CC_LJ_TAIL are inconsistent with -dE/dr.
+WARNING:  Should only be flagged at inflection points (src/pair_table.cpp:466)
+WARNING: 2 of 20000 force values in table CC_LJ_TAIL are inconsistent with -dE/dr.
+WARNING:  Should only be flagged at inflection points (src/pair_table.cpp:466)
+WARNING: 2 of 20000 force values in table CC_LJ_TAIL are inconsistent with -dE/dr.
+WARNING:  Should only be flagged at inflection points (src/pair_table.cpp:466)
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 10000, page size: 100000
+  master list distance cutoff = 18
+  ghost atom cutoff = 20
+  binsize = 9, bins = 12 12 445
+  6 neighbor lists, perpetual/occasional/extra = 6 0 0
+  (1) pair rebo, perpetual, skip from (6)
+      attributes: full, newton on, ghost
+      pair build: skip/ghost
+      stencil: none
+      bin: none
+  (2) pair rebo, perpetual, skip from (6)
+      attributes: full, newton on, ghost
+      pair build: skip/ghost
+      stencil: none
+      bin: none
+  (3) pair zbl, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d
+      bin: standard
+  (4) pair kolmogorov/crespi/z, perpetual, skip from (3)
+      attributes: half, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (5) pair table, perpetual, skip from (3)
+      attributes: half, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (6) neighbor class addition, perpetual
+      attributes: full, newton on, ghost
+      pair build: full/bin/ghost
+      stencil: full/ghost/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 43.77 | 43.77 | 43.77 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+         0   0              14305.543     -32689.857     -18384.314      97.62911       14207.913      14188.722      19.191778     -220          
+Loop time of 4.59e-07 on 1 procs for 0 steps with 4587 atoms
+
+0.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Bond    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 4.59e-07   |            |       |100.00
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             23 ave          23 max          23 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.30955e+06 ave 1.30955e+06 max 1.30955e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1309549
+Ave neighs/atom = 285.49139
+Ave special neighs/atom = 0
+Neighbor list builds = 0
+Dangerous builds = 0
+INITIAL p2f_threshold_R0_L1_v22000_s71002_8c5bdf -18384.314305168500141 14207.913426675666415 97.629110386416016354 -32689.856842230576149 14188.721649064200392 19.191777611466001474
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 43.77 | 43.77 | 43.77 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+         0   0              14305.543     -32689.857     -18384.314      97.62911       14207.913      14188.722      19.191778     -220          
+Loop time of 5e-07 on 1 procs for 0 steps with 4587 atoms
+
+0.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Bond    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 5e-07      |            |       |100.00
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             23 ave          23 max          23 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.30955e+06 ave 1.30955e+06 max 1.30955e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1309549
+Ave neighs/atom = 285.49139
+Ave special neighs/atom = 0
+Neighbor list builds = 0
+Dangerous builds = 0
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 45.7 | 45.7 | 45.7 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+         0   0              14305.543     -32689.857     -18384.314      97.62911       14207.913      14188.722      19.191778     -220          
+       500   0.05           14307.036     -32691.35      -18384.314      99.54468       14207.491      14188.722      18.769053     -220          
+      1000   0.1            14151.401     -32535.713     -18384.312      130.09958      14021.302      13966.903      54.398782     -218.27305    
+      1500   0.15           11241.1       -29625.06      -18383.96       3600.7858      7640.3144      5904.3445      1735.9699     -141.89986    
+      2000   0.2            10360.502     -28744.493     -18383.992      5731.381       4629.1207      3150.5545      1478.5662     -103.65217    
+      2500   0.25           10391.777     -28775.83      -18384.053      6133.4971      4258.2799      2890.1319      1368.1481     -99.285541    
+      2577   0.2577         10289.219     -28673.263     -18384.043      6090.4966      4198.7229      2885.3884      1313.3345     -99.205067    
+Loop time of 68.4386 on 1 procs for 2577 steps with 4587 atoms
+
+Performance: 0.325 ns/day, 73.771 hours/ns, 37.654 timesteps/s, 172.720 katom-step/s
+99.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 64.344     | 64.344     | 64.344     |   0.0 | 94.02
+Bond    | 0.0001142  | 0.0001142  | 0.0001142  |   0.0 |  0.00
+Neigh   | 3.9478     | 3.9478     | 3.9478     |   0.0 |  5.77
+Comm    | 0.0051574  | 0.0051574  | 0.0051574  |   0.0 |  0.01
+Output  | 0.010962   | 0.010962   | 0.010962   |   0.0 |  0.02
+Modify  | 0.10791    | 0.10791    | 0.10791    |   0.0 |  0.16
+Other   |            | 0.02254    |            |       |  0.03
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             21 ave          21 max          21 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.24652e+06 ave 1.24652e+06 max 1.24652e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1246517
+Ave neighs/atom = 271.74995
+Ave special neighs/atom = 0
+Neighbor list builds = 62
+Dangerous builds = 0
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 2577
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 48.75 | 48.75 | 48.75 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+      2577   0.2577         10289.219     -28673.263     -18384.043      6090.4966      4198.7229      2885.3884      1313.3345     -99.205067    
+      3000   0.3            10143.598     -28527.636     -18384.038      5987.877       4155.7205      2832.8839      1322.8366     -98.301514    
+      3500   0.35           10133.138     -28517.127     -18383.989      6014.2522      4118.8857      2852.4682      1266.4176     -98.636194    
+      4000   0.4            10113.533     -28497.534     -18384.001      6064.4735      4049.0595      2773.786       1275.2735     -97.260359    
+      4500   0.45           9896.6842     -28280.686     -18384.001      5913.8575      3982.8267      2756.1541      1226.6726     -96.95102     
+      5000   0.5            9783.6593     -28167.639     -18383.98       5793.7352      3989.9241      2765.2987      1224.6253     -97.092572    
+      5500   0.55           9660.685      -28044.621     -18383.936      5664.3278      3996.3572      2774.3328      1222.0244     -97.259487    
+      6000   0.6            9590.9003     -27974.848     -18383.947      5645.4765      3945.4238      2763.3849      1182.0389     -97.060374    
+      6500   0.65           9568.6229     -27952.585     -18383.962      5647.5372      3921.0857      2764.144       1156.9416     -97.072147    
+      7000   0.7            9615.1677     -27999.141     -18383.974      5672.4321      3942.7356      2745.7957      1196.9399     -96.748156    
+      7500   0.75           9662.0706     -28046.073     -18384.003      5755.5598      3906.5109      2746.9874      1159.5235     -96.771078    
+      8000   0.8            9653.5805     -28037.585     -18384.004      5712.2112      3941.3693      2727.4574      1213.9119     -96.432056    
+      8500   0.85           9645.0675     -28029.083     -18384.015      5704.4266      3940.6409      2740.9652      1199.6757     -96.673865    
+      9000   0.9            9622.6919     -28006.695     -18384.003      5689.9664      3932.7255      2734.826       1197.8995     -96.561826    
+      9500   0.95           9636.2806     -28020.277     -18383.996      5717.048       3919.2326      2738.7643      1180.4683     -96.628679    
+     10000   1              9639.3862     -28023.347     -18383.961      5723.8562      3915.53        2750.9918      1164.5382     -96.845272    
+     10500   1.05           9632.0695     -28016.039     -18383.969      5719.9199      3912.1496      2739.1337      1173.0159     -96.640296    
+     11000   1.1            9589.5157     -27973.495     -18383.98       5694.8954      3894.6203      2742.1598      1152.4605     -96.697582    
+     11500   1.15           9606.5616     -27990.54      -18383.979      5686.3175      3920.244       2748.4155      1171.8286     -96.808698    
+     12000   1.2            9606.9879     -27990.961     -18383.973      5694.4907      3912.4972      2741.8639      1170.6332     -96.693178    
+     12500   1.25           9575.122      -27959.088     -18383.966      5664.1436      3910.9784      2753.5473      1157.4311     -96.89718     
+     13000   1.3            9564.5366     -27948.53      -18383.993      5665.2453      3899.2913      2751.251       1148.0403     -96.85818     
+     13500   1.35           9556.9749     -27940.963     -18383.988      5689.1072      3867.8677      2740.6384      1127.2293     -96.67144     
+     14000   1.4            9509.967      -27893.951     -18383.984      5637.0404      3872.9266      2734.5096      1138.417      -96.560626    
+     14500   1.45           9596.4926     -27980.49      -18383.997      5701.2243      3895.2683      2729.6539      1165.6144     -96.474954    
+     15000   1.5            9538.57       -27922.562     -18383.992      5665.3369      3873.2331      2732.2862      1140.9469     -96.524547    
+     15500   1.55           9570.2773     -27954.29      -18384.013      5680.3989      3889.8784      2717.5899      1172.2885     -96.25571     
+     16000   1.6            9569.1591     -27953.155     -18383.996      5700.0129      3869.1463      2720.7406      1148.4056     -96.313535    
+     16500   1.65           9563.3232     -27947.315     -18383.992      5675.4599      3887.8633      2716.2611      1171.6022     -96.233451    
+     17000   1.7            9541.3582     -27925.359     -18384.001      5660.8366      3880.5216      2732.2286      1148.293      -96.516494    
+     17500   1.75           9519.7628     -27903.758     -18383.995      5625.5803      3894.1825      2737.8011      1156.3815     -96.618672    
+     18000   1.8            9510.4753     -27894.476     -18384.001      5643.7487      3866.7266      2742.5929      1124.1336     -96.705241    
+     18500   1.85           9529.36       -27913.389     -18384.029      5641.7884      3887.5716      2741.3883      1146.1833     -96.685099    
+     19000   1.9            9518.3312     -27902.379     -18384.048      5633.0405      3885.2907      2736.4148      1148.8759     -96.593824    
+     19500   1.95           9497.6932     -27881.727     -18384.034      5612.4844      3885.2088      2735.8851      1149.3237     -96.582499    
+     20000   2              9522.9579     -27906.997     -18384.039      5628.9703      3893.9876      2742.0309      1151.9567     -96.693386    
+     20500   2.05           9489.2488     -27873.278     -18384.029      5614.1022      3875.1466      2743.2004      1131.9462     -96.712001    
+     21000   2.1            9498.5525     -27882.566     -18384.014      5624.8182      3873.7343      2739.4405      1134.2938     -96.64347     
+     21500   2.15           9508.7031     -27892.731     -18384.028      5655.6808      3853.0224      2731.4667      1121.5557     -96.506204    
+     22000   2.2            9515.3977     -27899.406     -18384.008      5653.5033      3861.8945      2733.5843      1128.3101     -96.541518    
+     22500   2.25           9485.2802     -27869.296     -18384.016      5616.6737      3868.6065      2725.0931      1143.5134     -96.394067    
+     23000   2.3            9476.8097     -27860.823     -18384.014      5611.5808      3865.2289      2724.6765      1140.5524     -96.386601    
+     23500   2.35           9517.4617     -27901.484     -18384.022      5655.853       3861.6087      2725.2455      1136.3632     -96.396934    
+     24000   2.4            9497.8553     -27881.855     -18384          5632.9778      3864.8775      2733.682       1131.1955     -96.547974    
+     24500   2.45           9516.0436     -27900.05      -18384.006      5660.008       3856.0357      2731.8966      1124.1391     -96.516346    
+     25000   2.5            9513.0856     -27897.089     -18384.004      5645.6359      3867.4497      2733.1697      1134.2799     -96.540719    
+     25500   2.55           9505.9834     -27889.997     -18384.014      5647.4453      3858.5381      2730.6581      1127.88       -96.49627     
+     26000   2.6            9496.7264     -27880.731     -18384.005      5646.0086      3850.7178      2731.8708      1118.8471     -96.516698    
+     26500   2.65           9506.8435     -27890.851     -18384.007      5645.7446      3861.0988      2744.6248      1116.474      -96.739968    
+     27000   2.7            9495.1621     -27879.186     -18384.024      5616.296       3878.8661      2741.1974      1137.6688     -96.67777Reading data file ...
+  orthogonal box = (0 0 -2000) to (100 100 2000)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  4587 atoms
+  reading velocities ...
+  4587 velocities
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     0 = max # of 1-2 neighbors
+     0 = max # of 1-3 neighbors
+     0 = max # of 1-4 neighbors
+     1 = max # of special neighbors
+  special bonds CPU = 0.000 seconds
+  read_data CPU = 0.019 seconds
+4116 atoms in group target
+471 atoms in group projectile
+1372 atoms in group l1
+1372 atoms in group l2
+1372 atoms in group l3
+Displacing atoms ...
+1455 atoms in group edge_raw
+1455 atoms in group edge
+Reading rebo potential file ../potentials/CH.rebo with DATE: 2018-7-3
+Reading rebo potential file ../potentials/CH.rebo with DATE: 2018-7-3
+Reading kolmogorov/crespi/z potential file ../potentials/CC.KC with DATE: 2017-02-28
+Reading kolmogorov/crespi/z potential file ../potentials/CC.KC with DATE: 2017-02-28
+Reading kolmogorov/crespi/z potential file ../potentials/CC.KC with DATE: 2017-02-28
+WARNING: 2 of 20000 force values in table CC_LJ_TAIL are inconsistent with -dE/dr.
+WARNING:  Should only be flagged at inflection points (src/pair_table.cpp:466)
+WARNING: 2 of 20000 force values in table CC_LJ_TAIL are inconsistent with -dE/dr.
+WARNING:  Should only be flagged at inflection points (src/pair_table.cpp:466)
+WARNING: 2 of 20000 force values in table CC_LJ_TAIL are inconsistent with -dE/dr.
+WARNING:  Should only be flagged at inflection points (src/pair_table.cpp:466)
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 10000, page size: 100000
+  master list distance cutoff = 18
+  ghost atom cutoff = 20
+  binsize = 9, bins = 12 12 445
+  6 neighbor lists, perpetual/occasional/extra = 6 0 0
+  (1) pair rebo, perpetual, skip from (6)
+      attributes: full, newton on, ghost
+      pair build: skip/ghost
+      stencil: none
+      bin: none
+  (2) pair rebo, perpetual, skip from (6)
+      attributes: full, newton on, ghost
+      pair build: skip/ghost
+      stencil: none
+      bin: none
+  (3) pair zbl, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d
+      bin: standard
+  (4) pair kolmogorov/crespi/z, perpetual, skip from (3)
+      attributes: half, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (5) pair table, perpetual, skip from (3)
+      attributes: half, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (6) neighbor class addition, perpetual
+      attributes: full, newton on, ghost
+      pair build: full/bin/ghost
+      stencil: full/ghost/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 43.77 | 43.77 | 43.77 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+         0   0              14305.543     -32689.857     -18384.314      97.62911       14207.913      14188.722      19.191778     -220          
+Loop time of 4.58e-07 on 1 procs for 0 steps with 4587 atoms
+
+0.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Bond    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 4.58e-07   |            |       |100.00
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             23 ave          23 max          23 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.30955e+06 ave 1.30955e+06 max 1.30955e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1309549
+Ave neighs/atom = 285.49139
+Ave special neighs/atom = 0
+Neighbor list builds = 0
+Dangerous builds = 0
+INITIAL p2f_threshold_R0_L1_v22000_s71002_8c5bdf -18384.314305168500141 14207.913426675666415 97.629110386416016354 -32689.856842230576149 14188.721649064200392 19.191777611466001474
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 43.77 | 43.77 | 43.77 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+         0   0              14305.543     -32689.857     -18384.314      97.62911       14207.913      14188.722      19.191778     -220          
+Loop time of 3.75e-07 on 1 procs for 0 steps with 4587 atoms
+
+266.7% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Bond    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 3.75e-07   |            |       |100.00
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             23 ave          23 max          23 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.30955e+06 ave 1.30955e+06 max 1.30955e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1309549
+Ave neighs/atom = 285.49139
+Ave special neighs/atom = 0
+Neighbor list builds = 0
+Dangerous builds = 0
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 45.7 | 45.7 | 45.7 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+         0   0              14305.543     -32689.857     -18384.314      97.62911       14207.913      14188.722      19.191778     -220          
+       500   0.05           14307.036     -32691.35      -18384.314      99.54468       14207.491      14188.722      18.769053     -220          
+      1000   0.1            14151.401     -32535.713     -18384.312      130.09958      14021.302      13966.903      54.398782     -218.27305    
+      1500   0.15           11241.1       -29625.06      -18383.96       3600.7858      7640.3144      5904.3445      1735.9699     -141.89986    
+      2000   0.2            10360.502     -28744.493     -18383.992      5731.381       4629.1207      3150.5545      1478.5662     -103.65217    
+      2500   0.25           10391.777     -28775.83      -18384.053      6133.4971      4258.2799      2890.1319      1368.1481     -99.285541    
+      2577   0.2577         10289.219     -28673.263     -18384.043      6090.4966      4198.7229      2885.3884      1313.3345     -99.205067    
+Loop time of 68.4499 on 1 procs for 2577 steps with 4587 atoms
+
+Performance: 0.325 ns/day, 73.783 hours/ns, 37.648 timesteps/s, 172.691 katom-step/s
+99.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 64.373     | 64.373     | 64.373     |   0.0 | 94.04
+Bond    | 0.00011761 | 0.00011761 | 0.00011761 |   0.0 |  0.00
+Neigh   | 3.93       | 3.93       | 3.93       |   0.0 |  5.74
+Comm    | 0.0052114  | 0.0052114  | 0.0052114  |   0.0 |  0.01
+Output  | 0.010827   | 0.010827   | 0.010827   |   0.0 |  0.02
+Modify  | 0.10776    | 0.10776    | 0.10776    |   0.0 |  0.16
+Other   |            | 0.02288    |            |       |  0.03
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             21 ave          21 max          21 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.24652e+06 ave 1.24652e+06 max 1.24652e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1246517
+Ave neighs/atom = 271.74995
+Ave special neighs/atom = 0
+Neighbor list builds = 62
+Dangerous builds = 0
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 2577
+  Time step     : 0.0001
+Per MPI rank memory allocation (min/avg/max) = 48.75 | 48.75 | 48.75 Mbytes
+   Step          Time         c_ke_all       c_pe_all       v_etotal     c_ke_target   c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans     v_vcmz    
+      2577   0.2577         10289.219     -28673.263     -18384.043      6090.4966      4198.7229      2885.3884      1313.3345     -99.205067    
+      3000   0.3            10143.598     -28527.636     -18384.038      5987.877       4155.7205      2832.8839      1322.8366     -98.301514    
+      3500   0.35           10133.138     -28517.127     -18383.989      6014.2522      4118.8857      2852.4682      1266.4176     -98.636194    
+      4000   0.4            10113.533     -28497.534     -18384.001      6064.4735      4049.0595      2773.786       1275.2735     -97.260359    
+      4500   0.45           9896.6842     -28280.686     -18384.001      5913.8575      3982.8267      2756.1541      1226.6726     -96.95102     
+      5000   0.5            9783.6593     -28167.639     -18383.98       5793.7352      3989.9241      2765.2987      1224.6253     -97.092572    
+      5500   0.55           9660.685      -28044.621     -18383.936      5664.3278      3996.3572      2774.3328      1222.0244     -97.259487    
+      6000   0.6            9590.9003     -27974.848     -18383.947      5645.4765      3945.4238      2763.3849      1182.0389     -97.060374    
+      6500   0.65           9568.6229     -27952.585     -18383.962      5647.5372      3921.0857      2764.144       1156.9416     -97.072147    
+      7000   0.7            9615.1677     -27999.141     -18383.974      5672.4321      3942.7356      2745.7957      1196.9399     -96.748156    
+      7500   0.75           9662.0706     -28046.073     -18384.003      5755.5598      3906.5109      2746.9874      1159.5235     -96.771078    
+      8000   0.8            9653.5805     -28037.585     -18384.004      5712.2112      3941.3693      2727.4574      1213.9119     -96.432056    
+      8500   0.85           9645.0675     -28029.083     -18384.015      5704.4266      3940.6409      2740.9652      1199.6757     -96.673865    
+      9000   0.9            9622.6919     -28006.695     -18384.003      5689.9664      3932.7255      2734.826       1197.8995     -96.561826    
+      9500   0.95           9636.2806     -28020.277     -18383.996      5717.048       3919.2326      2738.7643      1180.4683     -96.628679    
+     10000   1              9639.3862     -28023.347     -18383.961      5723.8562      3915.53        2750.9918      1164.5382     -96.845272    
+     10500   1.05           9632.0695     -28016.039     -18383.969      5719.9199      3912.1496      2739.1337      1173.0159     -96.640296    
+     11000   1.1            9589.5157     -27973.495     -18383.98       5694.8954      3894.6203      2742.1598      1152.4605     -96.697582    
+     11500   1.15           9606.5616     -27990.54      -18383.979      5686.3175      3920.244       2748.4155      1171.8286     -96.808698    
+     12000   1.2            9606.9879     -27990.961     -18383.973      5694.4907      3912.4972      2741.8639      1170.6332     -96.693178    
+     12500   1.25           9575.122      -27959.088     -18383.966      5664.1436      3910.9784      2753.5473      1157.4311     -96.89718     
+     13000   1.3            9564.5366     -27948.53      -18383.993      5665.2453      3899.2913      2751.251       1148.0403     -96.85818     
+     13500   1.35           9556.9749     -27940.963     -18383.988      5689.1072      3867.8677      2740.6384      1127.2293     -96.67144     
+     14000   1.4            9509.967      -27893.951     -18383.984      5637.0404      3872.9266      2734.5096      1138.417      -96.560626    
+     14500   1.45           9596.4926     -27980.49      -18383.997      5701.2243      3895.2683      2729.6539      1165.6144     -96.474954    
+     15000   1.5            9538.57       -27922.562     -18383.992      5665.3369      3873.2331      2732.2862      1140.9469     -96.524547    
+     15500   1.55           9570.2773     -27954.29      -18384.013      5680.3989      3889.8784      2717.5899      1172.2885     -96.25571     
+     16000   1.6            9569.1591     -27953.155     -18383.996      5700.0129      3869.1463      2720.7406      1148.4056     -96.313535    
+     16500   1.65           9563.3232     -27947.315     -18383.992      5675.4599      3887.8633      2716.2611      1171.6022     -96.233451    
+     17000   1.7            9541.3582     -27925.359     -18384.001      5660.8366      3880.5216      2732.2286      1148.293      -96.516494    
+     17500   1.75           9519.7628     -27903.758     -18383.995      5625.5803      3894.1825      2737.8011      1156.3815     -96.618672    
+     18000   1.8            9510.4753     -27894.476     -18384.001      5643.7487      3866.7266      2742.5929      1124.1336     -96.705241    
+     18500   1.85           9529.36       -27913.389     -18384.029      5641.7884      3887.5716      2741.3883      1146.1833     -96.685099    
+     19000   1.9            9518.3312     -27902.379     -18384.048      5633.0405      3885.2907      2736.4148      1148.8759     -96.593824    
+     19500   1.95           9497.6932     -27881.727     -18384.034      5612.4844      3885.2088      2735.8851      1149.3237     -96.582499    
+     20000   2              9522.9579     -27906.997     -18384.039      5628.9703      3893.9876      2742.0309      1151.9567     -96.693386    
+     20500   2.05           9489.2488     -27873.278     -18384.029      5614.1022      3875.1466      2743.2004      1131.9462     -96.712001    
+     21000   2.1            9498.5525     -27882.566     -18384.014      5624.8182      3873.7343      2739.4405      1134.2938     -96.64347     
+     21500   2.15           9508.7031     -27892.731     -18384.028      5655.6808      3853.0224      2731.4667      1121.5557     -96.506204    
+     22000   2.2            9515.3977     -27899.406     -18384.008      5653.5033      3861.8945      2733.5843      1128.3101     -96.541518    
+     22500   2.25           9485.2802     -27869.296     -18384.016      5616.6737      3868.6065      2725.0931      1143.5134     -96.394067    
+     23000   2.3            9476.8097     -27860.823     -18384.014      5611.5808      3865.2289      2724.6765      1140.5524     -96.386601    
+     23500   2.35           9517.4617     -27901.484     -18384.022      5655.853       3861.6087      2725.2455      1136.3632     -96.396934    
+     24000   2.4            9497.8553     -27881.855     -18384          5632.9778      3864.8775      2733.682       1131.1955     -96.547974    
+     24500   2.45           9516.0436     -27900.05      -18384.006      5660.008       3856.0357      2731.8966      1124.1391     -96.516346    
+     25000   2.5            9513.0856     -27897.089     -18384.004      5645.6359      3867.4497      2733.1697      1134.2799     -96.540719    
+     25500   2.55           9505.9834     -27889.997     -18384.014      5647.4453      3858.5381      2730.6581      1127.88       -96.49627     
+     26000   2.6            9496.7264     -27880.731     -18384.005      5646.0086      3850.7178      2731.8708      1118.8471     -96.516698    
+     26500   2.65           9506.8435     -27890.851     -18384.007      5645.7446      3861.0988      2744.6248      1116.474      -96.739968    
+     27000   2.7            9495.1621     -27879.186     -18384.024      5616.296       3878.8661      2741.1974      1137.6688     -96.677777    
+     27500   2.75           9519.6685     -27903.705     -18384.036      5664.2165      3855.452       2740.3496      1115.1025     -96.661188    
+     28000   2.8            9510.1496     -27894.184     -18384.034      5658.8609      3851.2887      2740.4595      1110.8291     -96.66376     
+     28500   2.85           9524.0739     -27908.088     -18384.014      5654.7381      3869.3358      2740.5611      1128.7747     -96.668222    
+     29000   2.9            9501.8953     -27885.931     -18384.036      5634.5525      3867.3428      2746.293       1121.0498     -96.765539    
+     29500   2.95           9460.4015     -27844.435     -18384.034      5605.5394      3854.8622      2740.9228      1113.9394     -96.670341    
+     30000   3              9498.9087     -27882.958     -18384.05       5634.7559      3864.1528      2741.1651      1122.9877     -96.677155    
+     30500   3.05           9514.9339     -27899.001     -18384.067      5642.8437      3872.0902      2738.8155      1133.2747     -96.631137    
+     31000   3.1            9514.7655     -27898.819     -18384.053      5673.7127      3841.0528      2729.5903      1111.4625     -96.464041    
+     31500   3.15           9530.3233     -27914.378     -18384.054      5667.8422      3862.4811      2725.5357      1136.9455     -96.397924    
+     32000   3.2            9511.5038     -27895.532     -18384.029      5655.5869      3855.9168      2727.5721      1128.3447     -96.432836    
+     32500   3.25           9480.4462     -27864.464     -18384.018      5634.7969      3845.6493      2731.7564      1113.8928     -96.505503    
+     33000   3.3            9535.1834     -27919.194     -18384.01       5686.6105      3848.5729      2725.9196      1122.6533     -96.400233    
+     33500   3.35           9519.1669     -27903.183     -18384.017      5679.1185      3840.0483      2723.2369      1116.8114     -96.353218    
+     34000   3.4            9495.4172     -27879.43      -18384.013      5656.7506      3838.6666      2723.3233      1115.3433     -96.35548     
+     34500   3.45           9513.4589     -27897.483     -18384.024      5679.5326      3833.9263      2719.4045      1114.5218     -96.282135    
+     35000   3.5            9506.6828     -27890.713     -18384.03       5694.9212      3811.7616      2712.0877      1099.674      -96.154307    
+     35500   3.55           9513.1206     -27897.155     -18384.035      5669.6838      3843.4367      2717.2843      1126.1524     -96.245748    
+     36000   3.6            9522.961      -27907.002     -18384.041      5686.672       3836.289       2719.8718      1116.4172     -96.290848    
+     36500   3.65           9478.7063     -27862.741     -18384.035      5643.8222      3834.8841      2715.8615      1119.0226     -96.221469    
+     37000   3.7            9523.4228     -27907.459     -18384.036      5677.6212      3845.8016      2712.9221      1132.8795     -96.165192    
+     37500   3.75           9491.1117     -27875.154     -18384.042      5650.7978      3840.3139      2711.4413      1128.8727     -96.143224    
+     38000   3.8            9483.2607     -27867.323     -18384.062      5639.9005      3843.3602      2713.8744      1129.4858     -96.18454     
+     38500   3.85           9483.3624     -27867.425     -18384.062      5663.7872      3819.5752      2703.6204      1115.9548     -96.004226    
+     39000   3.9            9527.0269     -27911.099     -18384.073      5681.2958      3845.7311      2701.3577      1144.3734     -95.961448    
+     39500   3.95           9474.8287     -27858.911     -18384.082      5647.2646      3827.5641      2704.5635      1123.0006     -96.020174    
+     40000   4              9493.0566     -27877.133     -18384.076      5657.2965      3835.7601      2707.6241      1128.136      -96.069181    
+     40500   4.05           9483.3        -27867.375     -18384.075      5662.5041      3820.7959      2705.5383      1115.2576     -96.035428    
+     41000   4.1            9492.6765     -27876.76      -18384.084      5679.5308      3813.1457      2704.3039      1108.8418     -96.011636    
+     41500   4.15           9516.2116     -27900.271     -18384.06       5689.6028      3826.6088      2707.3614      1119.2474     -96.067543    
+     42000   4.2            9512.6765     -27896.724     -18384.048      5698.2304      3814.4461      2691.9045      1122.5416     -95.789813    
+     42500   4.25           9464.838      -27848.904     -18384.066      5653.4575      3811.3805      2700.6147      1110.7658     -95.942494    
+     43000   4.3            9511.3367     -27895.416     -18384.08       5675.1369      3836.1999      2695.2352      1140.9646     -95.847752    
+     43500   4.35           9501.0126     -27885.084     -18384.072      5684.9778      3816.0349      2696.4956      1119.5393     -95.873781    
+     44000   4.4            9509.5305     -27893.601     -18384.07       5695.2051      3814.3254      2695.8552      1118.4702     -95.861015    
+     44500   4.45           9507.2776     -27891.336     -18384.059      5703.395       3803.8826      2699.8687      1104.0139     -95.935687    
+     45000   4.5            9497.0787     -27881.139     -18384.06       5684.3367      3812.742       2696.5509      1116.1911     -95.878225    
+     45500   4.55           9453.7668     -27837.83      -18384.063      5653.2395      3800.5273      2695.1852      1105.3421     -95.853145    
+     46000   4.6            9525.4631     -27909.526     -18384.062      5701.686       3823.7771      2696.125       1127.6521     -95.872627    
+     46500   4.65           9506.6812     -27890.731     -18384.05       5674.3011      3832.38        2695.7616      1136.6184     -95.866252    
+     47000   4.7            9509.4844     -27893.532     -18384.048      5681.1333      3828.3511      2696.0589      1132.2922     -95.871383    
+     47500   4.75           9498.9402     -27882.991     -18384.051      5685.4188      3813.5214      2697.1037      1116.4177     -95.889889    
+     48000   4.8            9502.8003     -27886.858     -18384.058      5670.4548      3832.3455      2698.2835      1134.0619     -95.909657    
+     48500   4.85           9506.829      -27890.89      -18384.061      5695.0398      3811.7893      2695.4872      1116.3021     -95.859342    
+     49000   4.9            9502.0735     -27886.135     -18384.062      5700.0218      3802.0518      2697.5236      1104.5282     -95.897194    
+     49500   4.95           9501.9824     -27886.036     -18384.053      5685.0774      3816.905       2694.8634      1122.0416     -95.848266    
+     50000   5              9495.7502     -27879.793     -18384.043      5688.6421      3807.1081      2692.6836      1114.4245     -95.810565    
+     50500   5.05           9480.3136     -27864.357     -18384.044      5666.9906      3813.323       2699.5479      1113.7751     -95.934252    
+     51000   5.1            9490.3795     -27874.44      -18384.06       5676.719       3813.6605      2693.596       1120.0645     -95.826691    
+     51500   5.15           9470.0289     -27854.087     -18384.058      5662.8595      3807.1694      2695.138       1112.0314     -95.856363    
+     52000   5.2            9490.8836     -27874.936     -18384.053      5660.5648      3830.3188      2693.2014      1137.1174     -95.820621    
+     52500   5.25           9515.7675     -27899.823     -18384.056      5691.2538      3824.5137      2696.9456      1127.5681     -95.88723     
+     52577   5.2577         9470.524      -27854.573     -18384.049      5662.0195      3808.5045      2695.0185      1113.486      -95.853019    
+Loop time of 942.578 on 1 procs for 50000 steps with 4587 atoms
+
+Performance: 0.458 ns/day, 52.365 hours/ns, 53.046 timesteps/s, 243.322 katom-step/s
+99.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 892        | 892        | 892        |   0.0 | 94.63
+Bond    | 0.0020538  | 0.0020538  | 0.0020538  |   0.0 |  0.00
+Neigh   | 47.616     | 47.616     | 47.616     |   0.0 |  5.05
+Comm    | 0.26353    | 0.26353    | 0.26353    |   0.0 |  0.03
+Output  | 0.25638    | 0.25638    | 0.25638    |   0.0 |  0.03
+Modify  | 2.012      | 2.012      | 2.012      |   0.0 |  0.21
+Other   |            | 0.4284     |            |       |  0.05
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:            846 ave         846 max         846 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         975760 ave      975760 max      975760 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 975760
+Ave neighs/atom = 212.72291
+Ave special neighs/atom = 0
+Neighbor list builds = 1238
+Dangerous builds = 0
+FINAL p2f_threshold_R0_L1_v22000_s71002_8c5bdf -18384.04876092070117 -95.853019338868804766 -1148.2146502669418169 202.4543001805156166 -1238.7789684061622211 155.60641559006762691
+System init for write_data ...
+RUN_COMPLETE p2f_threshold_R0_L1_v22000_s71002_8c5bdf
+Total wall time: 0:16:51
+6.677777    
+     27500   2.75           9519.6685     -27903.705     -18384.036      5664.2165      3855.452       2740.3496      1115.1025     -96.661188    
+     28000   2.8            9510.1496     -27894.184     -18384.034      5658.8609      3851.2887      2740.4595      1110.8291     -96.66376     
+     28500   2.85           9524.0739     -27908.088     -18384.014      5654.7381      3869.3358      2740.5611      1128.7747     -96.668222    
+     29000   2.9            9501.8953     -27885.931     -18384.036      5634.5525      3867.3428      2746.293       1121.0498     -96.765539    
+     29500   2.95           9460.4015     -27844.435     -18384.034      5605.5394      3854.8622      2740.9228      1113.9394     -96.670341    
+     30000   3              9498.9087     -27882.958     -18384.05       5634.7559      3864.1528      2741.1651      1122.9877     -96.677155    
+     30500   3.05           9514.9339     -27899.001     -18384.067      5642.8437      3872.0902      2738.8155      1133.2747     -96.631137    
+     31000   3.1            9514.7655     -27898.819     -18384.053      5673.7127      3841.0528      2729.5903      1111.4625     -96.464041    
+     31500   3.15           9530.3233     -27914.378     -18384.054      5667.8422      3862.4811      2725.5357      1136.9455     -96.397924    
+     32000   3.2            9511.5038     -27895.532     -18384.029      5655.5869      3855.9168      2727.5721      1128.3447     -96.432836    
+     32500   3.25           9480.4462     -27864.464     -18384.018      5634.7969      3845.6493      2731.7564      1113.8928     -96.505503    
+     33000   3.3            9535.1834     -27919.194     -18384.01       5686.6105      3848.5729      2725.9196      1122.6533     -96.400233    
+     33500   3.35           9519.1669     -27903.183     -18384.017      5679.1185      3840.0483      2723.2369      1116.8114     -96.353218    
+     34000   3.4            9495.4172     -27879.43      -18384.013      5656.7506      3838.6666      2723.3233      1115.3433     -96.35548     
+     34500   3.45           9513.4589     -27897.483     -18384.024      5679.5326      3833.9263      2719.4045      1114.5218     -96.282135    
+     35000   3.5            9506.6828     -27890.713     -18384.03       5694.9212      3811.7616      2712.0877      1099.674      -96.154307    
+     35500   3.55           9513.1206     -27897.155     -18384.035      5669.6838      3843.4367      2717.2843      1126.1524     -96.245748    
+     36000   3.6            9522.961      -27907.002     -18384.041      5686.672       3836.289       2719.8718      1116.4172     -96.290848    
+     36500   3.65           9478.7063     -27862.741     -18384.035      5643.8222      3834.8841      2715.8615      1119.0226     -96.221469    
+     37000   3.7            9523.4228     -27907.459     -18384.036      5677.6212      3845.8016      2712.9221      1132.8795     -96.165192    
+     37500   3.75           9491.1117     -27875.154     -18384.042      5650.7978      3840.3139      2711.4413      1128.8727     -96.143224    
+     38000   3.8            9483.2607     -27867.323     -18384.062      5639.9005      3843.3602      2713.8744      1129.4858     -96.18454     
+     38500   3.85           9483.3624     -27867.425     -18384.062      5663.7872      3819.5752      2703.6204      1115.9548     -96.004226    
+     39000   3.9            9527.0269     -27911.099     -18384.073      5681.2958      3845.7311      2701.3577      1144.3734     -95.961448    
+     39500   3.95           9474.8287     -27858.911     -18384.082      5647.2646      3827.5641      2704.5635      1123.0006     -96.020174    
+     40000   4              9493.0566     -27877.133     -18384.076      5657.2965      3835.7601      2707.6241      1128.136      -96.069181    
+     40500   4.05           9483.3        -27867.375     -18384.075      5662.5041      3820.7959      2705.5383      1115.2576     -96.035428    
+     41000   4.1            9492.6765     -27876.76      -18384.084      5679.5308      3813.1457      2704.3039      1108.8418     -96.011636    
+     41500   4.15           9516.2116     -27900.271     -18384.06       5689.6028      3826.6088      2707.3614      1119.2474     -96.067543    
+     42000   4.2            9512.6765     -27896.724     -18384.048      5698.2304      3814.4461      2691.9045      1122.5416     -95.789813    
+     42500   4.25           9464.838      -27848.904     -18384.066      5653.4575      3811.3805      2700.6147      1110.7658     -95.942494    
+     43000   4.3            9511.3367     -27895.416     -18384.08       5675.1369      3836.1999      2695.2352      1140.9646     -95.847752    
+     43500   4.35           9501.0126     -27885.084     -18384.072      5684.9778      3816.0349      2696.4956      1119.5393     -95.873781    
+     44000   4.4            9509.5305     -27893.601     -18384.07       5695.2051      3814.3254      2695.8552      1118.4702     -95.861015    
+     44500   4.45           9507.2776     -27891.336     -18384.059      5703.395       3803.8826      2699.8687      1104.0139     -95.935687    
+     45000   4.5            9497.0787     -27881.139     -18384.06       5684.3367      3812.742       2696.5509      1116.1911     -95.878225    
+     45500   4.55           9453.7668     -27837.83      -18384.063      5653.2395      3800.5273      2695.1852      1105.3421     -95.853145    
+     46000   4.6            9525.4631     -27909.526     -18384.062      5701.686       3823.7771      2696.125       1127.6521     -95.872627    
+     46500   4.65           9506.6812     -27890.731     -18384.05       5674.3011      3832.38        2695.7616      1136.6184     -95.866252    
+     47000   4.7            9509.4844     -27893.532     -18384.048      5681.1333      3828.3511      2696.0589      1132.2922     -95.871383    
+     47500   4.75           9498.9402     -27882.991     -18384.051      5685.4188      3813.5214      2697.1037      1116.4177     -95.889889    
+     48000   4.8            9502.8003     -27886.858     -18384.058      5670.4548      3832.3455      2698.2835      1134.0619     -95.909657    
+     48500   4.85           9506.829      -27890.89      -18384.061      5695.0398      3811.7893      2695.4872      1116.3021     -95.859342    
+     49000   4.9            9502.0735     -27886.135     -18384.062      5700.0218      3802.0518      2697.5236      1104.5282     -95.897194    
+     49500   4.95           9501.9824     -27886.036     -18384.053      5685.0774      3816.905       2694.8634      1122.0416     -95.848266    
+     50000   5              9495.7502     -27879.793     -18384.043      5688.6421      3807.1081      2692.6836      1114.4245     -95.810565    
+     50500   5.05           9480.3136     -27864.357     -18384.044      5666.9906      3813.323       2699.5479      1113.7751     -95.934252    
+     51000   5.1            9490.3795     -27874.44      -18384.06       5676.719       3813.6605      2693.596       1120.0645     -95.826691    
+     51500   5.15           9470.0289     -27854.087     -18384.058      5662.8595      3807.1694      2695.138       1112.0314     -95.856363    
+     52000   5.2            9490.8836     -27874.936     -18384.053      5660.5648      3830.3188      2693.2014      1137.1174     -95.820621    
+     52500   5.25           9515.7675     -27899.823     -18384.056      5691.2538      3824.5137      2696.9456      1127.5681     -95.88723     
+     52577   5.2577         9470.524      -27854.573     -18384.049      5662.0195      3808.5045      2695.0185      1113.486      -95.853019    
+Loop time of 942.637 on 1 procs for 50000 steps with 4587 atoms
+
+Performance: 0.458 ns/day, 52.369 hours/ns, 53.043 timesteps/s, 243.307 katom-step/s
+99.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 891.86     | 891.86     | 891.86     |   0.0 | 94.61
+Bond    | 0.0020406  | 0.0020406  | 0.0020406  |   0.0 |  0.00
+Neigh   | 47.81      | 47.81      | 47.81      |   0.0 |  5.07
+Comm    | 0.27215    | 0.27215    | 0.27215    |   0.0 |  0.03
+Output  | 0.25809    | 0.25809    | 0.25809    |   0.0 |  0.03
+Modify  | 2.0141     | 2.0141     | 2.0141     |   0.0 |  0.21
+Other   |            | 0.4228     |            |       |  0.04
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:            846 ave         846 max         846 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         975760 ave      975760 max      975760 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 975760
+Ave neighs/atom = 212.72291
+Ave special neighs/atom = 0
+Neighbor list builds = 1238
+Dangerous builds = 0
+FINAL p2f_threshold_R0_L1_v22000_s71002_8c5bdf -18384.04876092070117 -95.853019338868804766 -1148.2146502669418169 202.4543001805156166 -1238.7789684061622211 155.60641559006762691
+System init for write_data ...
+RUN_COMPLETE p2f_threshold_R0_L1_v22000_s71002_8c5bdf
+Total wall time: 0:16:51
+7    
+     27500   2.75           9519.6685     -27903.705     -18384.036      5664.2165      3855.452       2740.3496      1115.1025     -96.661188    
+     28000   2.8            9510.1496     -27894.184     -18384.034      5658.8609      3851.2887      2740.4595      1110.8291     -96.66376     
+     28500   2.85           9524.0739     -27908.088     -18384.014      5654.7381      3869.3358      2740.5611      1128.7747     -96.668222    
+     29000   2.9            9501.8953     -27885.931     -18384.036      5634.5525      3867.3428      2746.293       1121.0498     -96.765539    
+     29500   2.95           9460.4015     -27844.435     -18384.034      5605.5394      3854.8622      2740.9228      1113.9394     -96.670341    
+     30000   3              9498.9087     -27882.958     -18384.05       5634.7559      3864.1528      2741.1651      1122.9877     -96.677155    
+     30500   3.05           9514.9339     -27899.001     -18384.067      5642.8437      3872.0902      2738.8155      1133.2747     -96.631137    
+     31000   3.1            9514.7655     -27898.819     -18384.053      5673.7127      3841.0528      2729.5903      1111.4625     -96.464041    
+     31500   3.15           9530.3233     -27914.378     -18384.054      5667.8422      3862.4811      2725.5357      1136.9455     -96.397924    
+     32000   3.2            9511.5038     -27895.532     -18384.029      5655.5869      3855.9168      2727.5721      1128.3447     -96.432836    
+     32500   3.25           9480.4462     -27864.464     -18384.018      5634.7969      3845.6493      2731.7564      1113.8928     -96.505503    
+     33000   3.3            9535.1834     -27919.194     -18384.01       5686.6105      3848.5729      2725.9196      1122.6533     -96.400233    
+     33500   3.35           9519.1669     -27903.183     -18384.017      5679.1185      3840.0483      2723.2369      1116.8114     -96.353218    
+     34000   3.4            9495.4172     -27879.43      -18384.013      5656.7506      3838.6666      2723.3233      1115.3433     -96.35548     
+     34500   3.45           9513.4589     -27897.483     -18384.024      5679.5326      3833.9263      2719.4045      1114.5218     -96.282135    
+     35000   3.5            9506.6828     -27890.713     -18384.03       5694.9212      3811.7616      2712.0877      1099.674      -96.154307    
+     35500   3.55           9513.1206     -27897.155     -18384.035      5669.6838      3843.4367      2717.2843      1126.1524     -96.245748    
+     36000   3.6            9522.961      -27907.002     -18384.041      5686.672       3836.289       2719.8718      1116.4172     -96.290848    
+     36500   3.65           9478.7063     -27862.741     -18384.035      5643.8222      3834.8841      2715.8615      1119.0226     -96.221469    
+     37000   3.7            9523.4228     -27907.459     -18384.036      5677.6212      3845.8016      2712.9221      1132.8795     -96.165192    
+     37500   3.75           9491.1117     -27875.154     -18384.042      5650.7978      3840.3139      2711.4413      1128.8727     -96.143224    
+     38000   3.8            9483.2607     -27867.323     -18384.062      5639.9005      3843.3602      2713.8744      1129.4858     -96.18454     
+     38500   3.85           9483.3624     -27867.425     -18384.062      5663.7872      3819.5752      2703.6204      1115.9548     -96.004226    
+     39000   3.9            9527.0269     -27911.099     -18384.073      5681.2958      3845.7311      2701.3577      1144.3734     -95.961448    
+     39500   3.95           9474.8287     -27858.911     -18384.082      5647.2646      3827.5641      2704.5635      1123.0006     -96.020174    
+     40000   4              9493.0566     -27877.133     -18384.076      5657.2965      3835.7601      2707.6241      1128.136      -96.069181    
+     40500   4.05           9483.3        -27867.375     -18384.075      5662.5041      3820.7959      2705.5383      1115.2576     -96.035428    
+     41000   4.1            9492.6765     -27876.76      -18384.084      5679.5308      3813.1457      2704.3039      1108.8418     -96.011636    
+     41500   4.15           9516.2116     -27900.271     -18384.06       5689.6028      3826.6088      2707.3614      1119.2474     -96.067543    
+     42000   4.2            9512.6765     -27896.724     -18384.048      5698.2304      3814.4461      2691.9045      1122.5416     -95.789813    
+     42500   4.25           9464.838      -27848.904     -18384.066      5653.4575      3811.3805      2700.6147      1110.7658     -95.942494    
+     43000   4.3            9511.3367     -27895.416     -18384.08       5675.1369      3836.1999      2695.2352      1140.9646     -95.847752    
+     43500   4.35           9501.0126     -27885.084     -18384.072      5684.9778      3816.0349      2696.4956      1119.5393     -95.873781    
+     44000   4.4            9509.5305     -27893.601     -18384.07       5695.2051      3814.3254      2695.8552      1118.4702     -95.861015    
+     44500   4.45           9507.2776     -27891.336     -18384.059      5703.395       3803.8826      2699.8687      1104.0139     -95.935687    
+     45000   4.5            9497.0787     -27881.139     -18384.06       5684.3367      3812.742       2696.5509      1116.1911     -95.878225    
+     45500   4.55           9453.7668     -27837.83      -18384.063      5653.2395      3800.5273      2695.1852      1105.3421     -95.853145    
+     46000   4.6            9525.4631     -27909.526     -18384.062      5701.686       3823.7771      2696.125       1127.6521     -95.872627    
+     46500   4.65           9506.6812     -27890.731     -18384.05       5674.3011      3832.38        2695.7616      1136.6184     -95.866252    
+     47000   4.7            9509.4844     -27893.532     -18384.048      5681.1333      3828.3511      2696.0589      1132.2922     -95.871383    
+     47500   4.75           9498.9402     -27882.991     -18384.051      5685.4188      3813.5214      2697.1037      1116.4177     -95.889889    
+     48000   4.8            9502.8003     -27886.858     -18384.058      5670.4548      3832.3455      2698.2835      1134.0619     -95.909657    
+     48500   4.85           9506.829      -27890.89      -18384.061      5695.0398      3811.7893      2695.4872      1116.3021     -95.859342    
+     49000   4.9            9502.0735     -27886.135     -18384.062      5700.0218      3802.0518      2697.5236      1104.5282     -95.897194    
+     49500   4.95           9501.9824     -27886.036     -18384.053      5685.0774      3816.905       2694.8634      1122.0416     -95.848266    
+     50000   5              9495.7502     -27879.793     -18384.043      5688.6421      3807.1081      2692.6836      1114.4245     -95.810565    
+     50500   5.05           9480.3136     -27864.357     -18384.044      5666.9906      3813.323       2699.5479      1113.7751     -95.934252    
+     51000   5.1            9490.3795     -27874.44      -18384.06       5676.719       3813.6605      2693.596       1120.0645     -95.826691    
+     51500   5.15           9470.0289     -27854.087     -18384.058      5662.8595      3807.1694      2695.138       1112.0314     -95.856363    
+     52000   5.2            9490.8836     -27874.936     -18384.053      5660.5648      3830.3188      2693.2014      1137.1174     -95.820621    
+     52500   5.25           9515.7675     -27899.823     -18384.056      5691.2538      3824.5137      2696.9456      1127.5681     -95.88723     
+     52577   5.2577         9470.524      -27854.573     -18384.049      5662.0195      3808.5045      2695.0185      1113.486      -95.853019    
+Loop time of 942.76 on 1 procs for 50000 steps with 4587 atoms
+
+Performance: 0.458 ns/day, 52.376 hours/ns, 53.036 timesteps/s, 243.275 katom-step/s
+99.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 892.24     | 892.24     | 892.24     |   0.0 | 94.64
+Bond    | 0.0019947  | 0.0019947  | 0.0019947  |   0.0 |  0.00
+Neigh   | 47.557     | 47.557     | 47.557     |   0.0 |  5.04
+Comm    | 0.27269    | 0.27269    | 0.27269    |   0.0 |  0.03
+Output  | 0.25587    | 0.25587    | 0.25587    |   0.0 |  0.03
+Modify  | 2.0078     | 2.0078     | 2.0078     |   0.0 |  0.21
+Other   |            | 0.4273     |            |       |  0.05
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:            846 ave         846 max         846 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         975760 ave      975760 max      975760 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 975760
+Ave neighs/atom = 212.72291
+Ave special neighs/atom = 0
+Neighbor list builds = 1238
+Dangerous builds = 0
+FINAL p2f_threshold_R0_L1_v22000_s71002_8c5bdf -18384.04876092070117 -95.853019338868804766 -1148.2146502669418169 202.4543001805156166 -1238.7789684061622211 155.60641559006762691
+System init for write_data ...
+RUN_COMPLETE p2f_threshold_R0_L1_v22000_s71002_8c5bdf
+Total wall time: 0:16:51
+677777    
+     27500   2.75           9519.6685     -27903.705     -18384.036      5664.2165      3855.452       2740.3496      1115.1025     -96.661188    
+     28000   2.8            9510.1496     -27894.184     -18384.034      5658.8609      3851.2887      2740.4595      1110.8291     -96.66376     
+     28500   2.85           9524.0739     -27908.088     -18384.014      5654.7381      3869.3358      2740.5611      1128.7747     -96.668222    
+     29000   2.9            9501.8953     -27885.931     -18384.036      5634.5525      3867.3428      2746.293       1121.0498     -96.765539    
+     29500   2.95           9460.4015     -27844.435     -18384.034      5605.5394      3854.8622      2740.9228      1113.9394     -96.670341    
+     30000   3              9498.9087     -27882.958     -18384.05       5634.7559      3864.1528      2741.1651      1122.9877     -96.677155    
+     30500   3.05           9514.9339     -27899.001     -18384.067      5642.8437      3872.0902      2738.8155      1133.2747     -96.631137    
+     31000   3.1            9514.7655     -27898.819     -18384.053      5673.7127      3841.0528      2729.5903      1111.4625     -96.464041    
+     31500   3.15           9530.3233     -27914.378     -18384.054      5667.8422      3862.4811      2725.5357      1136.9455     -96.397924    
+     32000   3.2            9511.5038     -27895.532     -18384.029      5655.5869      3855.9168      2727.5721      1128.3447     -96.432836    
+     32500   3.25           9480.4462     -27864.464     -18384.018      5634.7969      3845.6493      2731.7564      1113.8928     -96.505503    
+     33000   3.3            9535.1834     -27919.194     -18384.01       5686.6105      3848.5729      2725.9196      1122.6533     -96.400233    
+     33500   3.35           9519.1669     -27903.183     -18384.017      5679.1185      3840.0483      2723.2369      1116.8114     -96.353218    
+     34000   3.4            9495.4172     -27879.43      -18384.013      5656.7506      3838.6666      2723.3233      1115.3433     -96.35548     
+     34500   3.45           9513.4589     -27897.483     -18384.024      5679.5326      3833.9263      2719.4045      1114.5218     -96.282135    
+     35000   3.5            9506.6828     -27890.713     -18384.03       5694.9212      3811.7616      2712.0877      1099.674      -96.154307    
+     35500   3.55           9513.1206     -27897.155     -18384.035      5669.6838      3843.4367      2717.2843      1126.1524     -96.245748    
+     36000   3.6            9522.961      -27907.002     -18384.041      5686.672       3836.289       2719.8718      1116.4172     -96.290848    
+     36500   3.65           9478.7063     -27862.741     -18384.035      5643.8222      3834.8841      2715.8615      1119.0226     -96.221469    
+     37000   3.7            9523.4228     -27907.459     -18384.036      5677.6212      3845.8016      2712.9221      1132.8795     -96.165192    
+     37500   3.75           9491.1117     -27875.154     -18384.042      5650.7978      3840.3139      2711.4413      1128.8727     -96.143224    
+     38000   3.8            9483.2607     -27867.323     -18384.062      5639.9005      3843.3602      2713.8744      1129.4858     -96.18454     
+     38500   3.85           9483.3624     -27867.425     -18384.062      5663.7872      3819.5752      2703.6204      1115.9548     -96.004226    
+     39000   3.9            9527.0269     -27911.099     -18384.073      5681.2958      3845.7311      2701.3577      1144.3734     -95.961448    
+     39500   3.95           9474.8287     -27858.911     -18384.082      5647.2646      3827.5641      2704.5635      1123.0006     -96.020174    
+     40000   4              9493.0566     -27877.133     -18384.076      5657.2965      3835.7601      2707.6241      1128.136      -96.069181    
+     40500   4.05           9483.3        -27867.375     -18384.075      5662.5041      3820.7959      2705.5383      1115.2576     -96.035428    
+     41000   4.1            9492.6765     -27876.76      -18384.084      5679.5308      3813.1457      2704.3039      1108.8418     -96.011636    
+     41500   4.15           9516.2116     -27900.271     -18384.06       5689.6028      3826.6088      2707.3614      1119.2474     -96.067543    
+     42000   4.2            9512.6765     -27896.724     -18384.048      5698.2304      3814.4461      2691.9045      1122.5416     -95.789813    
+     42500   4.25           9464.838      -27848.904     -18384.066      5653.4575      3811.3805      2700.6147      1110.7658     -95.942494    
+     43000   4.3            9511.3367     -27895.416     -18384.08       5675.1369      3836.1999      2695.2352      1140.9646     -95.847752    
+     43500   4.35           9501.0126     -27885.084     -18384.072      5684.9778      3816.0349      2696.4956      1119.5393     -95.873781    
+     44000   4.4            9509.5305     -27893.601     -18384.07       5695.2051      3814.3254      2695.8552      1118.4702     -95.861015    
+     44500   4.45           9507.2776     -27891.336     -18384.059      5703.395       3803.8826      2699.8687      1104.0139     -95.935687    
+     45000   4.5            9497.0787     -27881.139     -18384.06       5684.3367      3812.742       2696.5509      1116.1911     -95.878225    
+     45500   4.55           9453.7668     -27837.83      -18384.063      5653.2395      3800.5273      2695.1852      1105.3421     -95.853145    
+     46000   4.6            9525.4631     -27909.526     -18384.062      5701.686       3823.7771      2696.125       1127.6521     -95.872627    
+     46500   4.65           9506.6812     -27890.731     -18384.05       5674.3011      3832.38        2695.7616      1136.6184     -95.866252    
+     47000   4.7            9509.4844     -27893.532     -18384.048      5681.1333      3828.3511      2696.0589      1132.2922     -95.871383    
+     47500   4.75           9498.9402     -27882.991     -18384.051      5685.4188      3813.5214      2697.1037      1116.4177     -95.889889    
+     48000   4.8            9502.8003     -27886.858     -18384.058      5670.4548      3832.3455      2698.2835      1134.0619     -95.909657    
+     48500   4.85           9506.829      -27890.89      -18384.061      5695.0398      3811.7893      2695.4872      1116.3021     -95.859342    
+     49000   4.9            9502.0735     -27886.135     -18384.062      5700.0218      3802.0518      2697.5236      1104.5282     -95.897194    
+     49500   4.95           9501.9824     -27886.036     -18384.053      5685.0774      3816.905       2694.8634      1122.0416     -95.848266    
+     50000   5              9495.7502     -27879.793     -18384.043      5688.6421      3807.1081      2692.6836      1114.4245     -95.810565    
+     50500   5.05           9480.3136     -27864.357     -18384.044      5666.9906      3813.323       2699.5479      1113.7751     -95.934252    
+     51000   5.1            9490.3795     -27874.44      -18384.06       5676.719       3813.6605      2693.596       1120.0645     -95.826691    
+     51500   5.15           9470.0289     -27854.087     -18384.058      5662.8595      3807.1694      2695.138       1112.0314     -95.856363    
+     52000   5.2            9490.8836     -27874.936     -18384.053      5660.5648      3830.3188      2693.2014      1137.1174     -95.820621    
+     52500   5.25           9515.7675     -27899.823     -18384.056      5691.2538      3824.5137      2696.9456      1127.5681     -95.88723     
+     52577   5.2577         9470.524      -27854.573     -18384.049      5662.0195      3808.5045      2695.0185      1113.486      -95.853019    
+Loop time of 943.442 on 1 procs for 50000 steps with 4587 atoms
+
+Performance: 0.458 ns/day, 52.413 hours/ns, 52.997 timesteps/s, 243.099 katom-step/s
+99.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 892.93     | 892.93     | 892.93     |   0.0 | 94.65
+Bond    | 0.0019481  | 0.0019481  | 0.0019481  |   0.0 |  0.00
+Neigh   | 47.552     | 47.552     | 47.552     |   0.0 |  5.04
+Comm    | 0.27054    | 0.27054    | 0.27054    |   0.0 |  0.03
+Output  | 0.25707    | 0.25707    | 0.25707    |   0.0 |  0.03
+Modify  | 2.004      | 2.004      | 2.004      |   0.0 |  0.21
+Other   |            | 0.4276     |            |       |  0.05
+
+Nlocal:           4587 ave        4587 max        4587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:            846 ave         846 max         846 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         975760 ave      975760 max      975760 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 975760
+Ave neighs/atom = 212.72291
+Ave special neighs/atom = 0
+Neighbor list builds = 1238
+Dangerous builds = 0
+FINAL p2f_threshold_R0_L1_v22000_s71002_8c5bdf -18384.04876092070117 -95.853019338868804766 -1148.2146502669418169 202.4543001805156166 -1238.7789684061622211 155.60641559006762691
+System init for write_data ...
+RUN_COMPLETE p2f_threshold_R0_L1_v22000_s71002_8c5bdf
+Total wall time: 0:16:52
