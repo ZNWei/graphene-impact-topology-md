@@ -1,0 +1,45 @@
+DATA DICTIONARY
+CSV encoding: UTF-8; delimiter: comma; decimal separator: dot; one header row.
+No rounding was applied to underlying numerical values; counts are integers.
+
+run_id: immutable original simulation identifier.
+campaign/stage: provenance group, never inferred from the terminal outcome.
+cell: R0L0, R0L1, R1L0 or R1L1.
+R: cross-interface reactive topology off/on. L: switched LJ tail off/on.
+seed: target thermal velocity seed; offset_x_A, offset_y_A: impact offsets [A].
+velocity_mps: prescribed incident speed [m/s]; velocity_km_s: [km/s].
+projectile_com_ke_loss_eV: initial minus terminal projectile COM KE [eV].
+terminal_target_ke_eV: terminal kinetic energy of original target atoms [eV].
+target_undercoordination_net_atoms: final minus initial target same-layer
+  undercoordination count after excluding original edge IDs [atoms].
+energy_drift_fraction: (terminal E_total - initial E_total)/abs(initial E_total).
+absolute_fraction: absolute value of energy_drift_fraction [dimensionless].
+*_mean: arithmetic mean across the stated run sample.
+*_sd, sample_sd_eV: sample standard deviation (n-1), not standard error.
+axis/setting: P4 varied parameter and value; units are carried by the axis name.
+reference_mean_eV: P4 sheet-size-60-A three-run mean [eV].
+change_percent: 100*(setting mean - reference mean)/reference mean [%].
+sd_percent_of_reference: 100*sample SD/reference mean [%].
+primary_downstream_fraction: N(type4,z<=-500 A)/471 at the terminal state.
+primary_event: 1 if primary_downstream_fraction>=0.5, otherwise 0.
+raw_verification_status: verified_from_terminal_data or
+  processed_record_only_raw_unavailable. The latter applies to 30 round2 rows.
+n: trajectories per group/setting, as identified by the table context.
+events: number of trajectories satisfying the mass-transmission event.
+event_probability: observed events/n [dimensionless].
+wilson95_low/high: lower/upper Wilson 95% limits for a group probability.
+intercept_alpha, slope_beta: fitted grouped-logistic coefficients with
+  velocity_center_mps=21500 and velocity_scale_mps=1000.
+v_t50_mps, v_t50_km_s: fitted probability-0.5 transition velocity [m/s, km/s].
+wald95_low_km_s, wald95_high_km_s: nominal model-based Wald 95% threshold
+  limits [km/s], conditional on the model and sequential velocity selection.
+fitted_event_probability: logistic curve evaluated at the supplied speed.
+VT50_difference_km_s: descriptive point-estimate contrast [km/s].
+raw_record_status: availability description, not the historical quality gate.
+
+Raw track.dat column order is recorded per run in in/run_specs.json.
+Its last column projectile_vz_mps is historically named in metadata but the
+underlying LAMMPS track stores v_vcmz in A/ps. The archived analyzer does not
+convert this column. The supplied figure metrics use energy columns and do
+not use that last speed column. Multiply raw last-column values by 100 for m/s.
+Original names and bytes are preserved instead of silently rewriting them.
