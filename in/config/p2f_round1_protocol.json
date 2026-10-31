@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "campaign_id": "multilayer_graphene_p2f_vt50_adaptive_resolution_round1",
+  "purpose": "Pre-registered P2-F resolution stage. It adds one independent intermediate velocity group to each factor cell because the completed 80-run P2-F two-speed estimator is non-estimable under complete separation. It must be analysed jointly with the frozen completed P2-F snapshot and must not overwrite it.",
+  "parent_snapshot": {
+    "result_file": "parent_snapshot/p2f_transmission_results.json",
+    "result_sha256": "f89fb37e52fcac621d947f5c4170655a99ef7d8336eb2edf47354dcac51116f5",
+    "manifest_sha256": "9e983f1c5cb98521b0a7df66981a5a11416c7ccb2bce05b9b1441a10cdb1502d",
+    "protocol_sha256": "d24a38eb705211f72bcce15fd95e1bffd13f1728db0f0310a4d95debab5398f5",
+    "accepted_parent_run_count": 80,
+    "provenance_note": "The parent snapshot records the completed P2-F observations only. It is retained read-only and is never rewritten by this package."
+  },
+  "factor_cells": [
+    {"cross_rebo": 0, "cross_lj": 0, "resolution_velocity_mps": 21000},
+    {"cross_rebo": 0, "cross_lj": 1, "resolution_velocity_mps": 21000},
+    {"cross_rebo": 1, "cross_lj": 0, "resolution_velocity_mps": 21000},
+    {"cross_rebo": 1, "cross_lj": 1, "resolution_velocity_mps": 21000}
+  ],
+  "replicates_per_cell": 10,
+  "seed_start": 91001,
+  "impact_offsets_angstrom": [[0.30, 0.00], [-0.30, 0.00], [0.00, 0.30], [0.00, -0.30], [0.55, 0.20], [-0.55, 0.20], [0.55, -0.20], [-0.55, -0.20], [0.78, 0.48], [-0.78, -0.48]],
+  "baseline_overrides": {
+    "box_zhalf_angstrom": 2000.0,
+    "recovery_ps": 5.0,
+    "trajectory_enabled": true,
+    "trajectory_every_steps": 1000
+  },
+  "primary_endpoint": {
+    "name": "terminal_projectile_origin_downstream_mass_fraction",
+    "definition": "At the terminal snapshot after the pre-registered approach run plus 5.0 ps NVE recovery, count original projectile atoms (LAMMPS type 4) with z <= -500 Angstrom and divide by the initial projectile atom count.",
+    "projectile_type": 4,
+    "control_plane_angstrom": -500.0,
+    "event_threshold_fraction": 0.5,
+    "event_definition": "A binary event is recorded only when the terminal projectile-origin downstream mass fraction is greater than or equal to 0.50.",
+    "reporting_name": "V_T,50: velocity at which the probability of the pre-registered >=50% projectile-origin downstream mass-transmission event is 0.5.",
+    "prohibited_name": "Do not call this conventional ballistic V50 or an intact-projectile perforation threshold."
+  },
+  "secondary_control_planes_angstrom": [-100.0, -250.0],
+  "expected_atom_counts": {"projectile_type_4": 471, "target_types_1_to_3": 4116},
+  "acceptance": {
+    "require_run_complete": true,
+    "reject_lost_atoms": true,
+    "require_terminal_data": true,
+    "require_trajectory": true,
+    "require_expected_atom_counts": true,
+    "require_exact_n_per_cell_velocity": 10,
+    "require_at_least_two_distinct_nonextreme_velocity_groups": true,
+    "require_positive_logistic_slope": true,
+    "require_v_t_50_inside_observed_velocity_range": true
+  },
+  "analysis_model": {
+    "name": "three-speed grouped binomial logistic regression",
+    "velocity_center_mps": 21000,
+    "velocity_scale_mps": 1000,
+    "maximum_iterations": 100,
+    "convergence_tolerance": 1e-10,
+    "require_monotonic_observed_event_fractions": true,
+    "critical_boundary": "A V_T,50 is reportable only if all four cells have 10/10 valid new resolution runs, at least two distinct velocity groups in each pooled cell have 1–9 events, the pooled parent-plus-resolution grouped logistic fit is finite with positive slope, observed fractions are non-decreasing, and V_T,50 lies inside the tested velocity span. Failure of any condition preserves not_ready and requires a separately preregistered follow-up; no automatic next-round velocity selection is permitted."
+  }
+}

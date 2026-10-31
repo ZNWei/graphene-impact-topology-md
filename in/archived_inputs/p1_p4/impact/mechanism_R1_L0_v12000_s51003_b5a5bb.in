@@ -1,0 +1,80 @@
+# Generated P1-P4 impact input; run=mechanism_R1_L0_v12000_s51003_b5a5bb
+clear
+units metal
+dimension 3
+boundary p p f
+atom_style full
+newton on
+comm_modify cutoff 20.0
+read_data generated/base/base_91426bb5a5bb.data
+group target type 1 2 3
+group projectile type 4
+group l1 type 1
+group l2 type 2
+group l3 type 3
+variable sheet equal 60
+variable boxxy equal 100
+variable sxlo equal (v_boxxy-v_sheet)/2.0
+variable sxhi equal (v_boxxy+v_sheet)/2.0
+variable ew equal 6
+region ex1 block ${sxlo} $(v_sxlo+v_ew) INF INF INF INF units box
+region ex2 block $(v_sxhi-v_ew) ${sxhi} INF INF INF INF units box
+region ey1 block INF INF ${sxlo} $(v_sxlo+v_ew) INF INF units box
+region ey2 block INF INF $(v_sxhi-v_ew) ${sxhi} INF INF units box
+region edges union 4 ex1 ex2 ey1 ey2
+group edge_raw region edges
+group edge intersect edge_raw target
+velocity edge set 0 0 0
+fix freeze edge setforce 0 0 0
+pair_style hybrid/overlay rebo zbl 0.95 1.00 kolmogorov/crespi/z 16.0
+pair_coeff * * rebo potentials/CH.rebo C C C C
+pair_coeff * * zbl 6.0 6.0
+pair_coeff 1 2 kolmogorov/crespi/z potentials/CC.KC C C C NULL
+pair_coeff 2 3 kolmogorov/crespi/z potentials/CC.KC C C C NULL
+pair_coeff 1 3 kolmogorov/crespi/z potentials/CC.KC C C C NULL
+neighbor 2.0 bin
+neigh_modify every 1 delay 0 check yes one 10000
+timestep 0.0001
+velocity projectile zero linear
+velocity projectile set 0 0 -120 sum yes units box
+compute ke_all all ke
+compute pe_all all pe
+compute ke_target target ke
+compute ke_projectile projectile ke
+compute pe_atom all pe/atom
+compute pe_target target reduce sum c_pe_atom
+compute pe_projectile projectile reduce sum c_pe_atom
+compute zmin_target target reduce min z
+compute zmax_target target reduce max z
+compute zmin_projectile projectile reduce min z
+compute zmax_projectile projectile reduce max z
+compute e_reactive all pair rebo
+variable e_reactive equal c_e_reactive
+compute e_zbl all pair zbl
+compute e_kc all pair kolmogorov/crespi/z
+variable e_lj equal 0.0
+variable vcmx equal vcm(projectile,x)
+variable vcmy equal vcm(projectile,y)
+variable vcmz equal vcm(projectile,z)
+variable projectile_zcm equal xcm(projectile,z)
+variable nprojectile equal count(projectile)
+variable ke_projectile_cm equal 0.5*v_nprojectile*12.0107*(v_vcmx*v_vcmx+v_vcmy*v_vcmy+v_vcmz*v_vcmz)*1.0364269e-4
+variable ke_projectile_nontrans equal c_ke_projectile-v_ke_projectile_cm
+variable etotal equal c_ke_all+c_pe_all
+variable stage equal 0
+variable time_out equal time
+variable vz_mps equal v_vcmz*100.0
+thermo 500
+thermo_style custom step time c_ke_all c_pe_all v_etotal c_ke_target c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans v_vcmz
+fix nveall all nve
+fix track all ave/time 100 1 100 v_time_out v_stage c_ke_all c_pe_all v_etotal c_ke_target c_ke_projectile v_ke_projectile_cm v_ke_projectile_nontrans c_pe_target c_pe_projectile v_e_reactive c_e_zbl c_e_kc v_e_lj c_zmin_target c_zmax_target c_zmin_projectile c_zmax_projectile v_projectile_zcm v_vcmz file runs/mechanism_R1_L0_v12000_s51003_b5a5bb/track.dat title1 "# P1-P4 track" title2 "# units: step ps stage eV eV eV eV eV eV eV eV eV eV eV eV eV A A A A A A/ps"
+run 0
+print "INITIAL mechanism_R1_L0_v12000_s51003_b5a5bb $(v_etotal) $(c_ke_projectile) $(c_ke_target) $(c_pe_all) $(v_ke_projectile_cm) $(v_ke_projectile_nontrans)" file runs/mechanism_R1_L0_v12000_s51003_b5a5bb/initial_state.txt
+dump traj all custom 200 runs/mechanism_R1_L0_v12000_s51003_b5a5bb/trajectory.lammpstrj id type x y z vx vy vz c_pe_atom
+dump_modify traj sort id
+run 0
+run 4725
+run 50000
+print "FINAL mechanism_R1_L0_v12000_s51003_b5a5bb $(v_etotal) $(v_vcmz) $(c_zmin_target) $(c_zmax_target) $(c_zmin_projectile) $(c_zmax_projectile)" file runs/mechanism_R1_L0_v12000_s51003_b5a5bb/final_state.txt
+write_data runs/mechanism_R1_L0_v12000_s51003_b5a5bb/final.data
+print "RUN_COMPLETE mechanism_R1_L0_v12000_s51003_b5a5bb" append runs/mechanism_R1_L0_v12000_s51003_b5a5bb/final_state.txt

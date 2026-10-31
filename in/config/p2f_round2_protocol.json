@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "campaign_id": "multilayer_graphene_p2f_vt50_resolution_round2",
+  "purpose": "Second pre-registered P2-F resolution stage. It adds one velocity group only to the three cells whose pooled parent-plus-round1 ordinary grouped-logistic likelihood remains unbounded. R1L0 is excluded because its threshold is already estimable and must not be rerun.",
+  "parent_snapshots": {
+    "p2f_parent_80_results": {"path": "parent_snapshot/p2f_parent_80_results.json", "sha256": "f89fb37e52fcac621d947f5c4170655a99ef7d8336eb2edf47354dcac51116f5", "expected_valid_runs": 80},
+    "p2f_round1_40_results": {"path": "parent_snapshot/p2f_round1_40_results.json", "sha256": "93dcfcc4d33841b60c4f0d7a97909198f3d2311c18ffe9ec4872a60e68a79bbd", "expected_valid_runs": 40}
+  },
+  "factor_cells": [
+    {"cross_rebo": 0, "cross_lj": 0, "resolution_velocity_mps": 20500, "rationale": "The pooled observations 20 km/s: 1/10, 21 km/s: 10/10, 22 km/s: 10/10 contain only one non-extreme group. 20.5 km/s is the preregistered midpoint for a second mixed group."},
+    {"cross_rebo": 0, "cross_lj": 1, "resolution_velocity_mps": 21500, "rationale": "The pooled observations 20 km/s: 0/10, 21 km/s: 3/10, 22 km/s: 10/10 contain only one non-extreme group. 21.5 km/s is the preregistered midpoint for a second mixed group."},
+    {"cross_rebo": 1, "cross_lj": 1, "resolution_velocity_mps": 21500, "rationale": "The pooled observations 21 km/s: 0/10, 22 km/s: 6/10, 24 km/s: 10/10 contain only one non-extreme group. 21.5 km/s is the preregistered midpoint for a second mixed group."}
+  ],
+  "excluded_estimable_cell": {"cross_rebo": 1, "cross_lj": 0, "reason": "R1L0 is already estimated from the locked 20/21/22 km/s pooled data and is deliberately not rerun in round 2."},
+  "replicates_per_cell": 10,
+  "seed_start": 101001,
+  "impact_offsets_angstrom": [[0.15, 0.00], [-0.15, 0.00], [0.00, 0.15], [0.00, -0.15], [0.33, 0.11], [-0.33, 0.11], [0.33, -0.11], [-0.33, -0.11], [0.67, 0.31], [-0.67, -0.31]],
+  "baseline_overrides": {"box_zhalf_angstrom": 2000.0, "recovery_ps": 5.0, "trajectory_enabled": true, "trajectory_every_steps": 1000},
+  "primary_endpoint": {"name": "terminal_projectile_origin_downstream_mass_fraction", "definition": "At the terminal snapshot after the pre-registered approach run plus 5.0 ps NVE recovery, count original projectile atoms (LAMMPS type 4) with z <= -500 Angstrom and divide by the initial projectile atom count.", "projectile_type": 4, "control_plane_angstrom": -500.0, "event_threshold_fraction": 0.5, "event_definition": "A binary event is recorded only when the terminal projectile-origin downstream mass fraction is greater than or equal to 0.50.", "reporting_name": "V_T,50: velocity at which the probability of the pre-registered >=50% projectile-origin downstream mass-transmission event is 0.5.", "prohibited_name": "Do not call this conventional ballistic V50 or an intact-projectile perforation threshold."},
+  "secondary_control_planes_angstrom": [-100.0, -250.0],
+  "expected_atom_counts": {"projectile_type_4": 471, "target_types_1_to_3": 4116},
+  "acceptance": {"require_run_complete": true, "reject_lost_atoms": true, "require_terminal_data": true, "require_trajectory": true, "require_expected_atom_counts": true, "require_exact_n_per_cell_velocity": 10, "require_at_least_two_distinct_nonextreme_velocity_groups": true, "require_positive_logistic_slope": true, "require_v_t_50_inside_observed_velocity_range": true},
+  "analysis_model": {"name": "grouped binomial logistic regression using all pooled P2-F, round-1, and round-2 velocity groups", "velocity_center_mps": 21500, "velocity_scale_mps": 1000, "maximum_iterations": 100, "convergence_tolerance": 1e-10, "require_monotonic_observed_event_fractions": true, "critical_boundary": "A V_T,50 is reportable only if the locked 120-run parent snapshot passes hash and quality checks, all 30 round-2 runs are valid and complete, at least two distinct velocities per cell have 1–9 events, observed fractions do not decrease, and the pooled ordinary grouped-logistic fit is finite with positive slope and V_T,50 inside the tested velocity span. Failure preserves not_ready. No automatic further velocity selection is permitted."}
+}

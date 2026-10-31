@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "campaign_id": "multilayer_graphene_q1_mechanism_p1_p4",
+  "lammps_units": "metal",
+  "potentials": {
+    "rebo": "potentials/CH.rebo",
+    "airebo": "potentials/CH.airebo",
+    "kc": "potentials/CC.KC"
+  },
+  "baseline": {
+    "nlayers": 3,
+    "sheet_size_angstrom": 60.0,
+    "box_xy_angstrom": 100.0,
+    "box_zhalf_angstrom": 1000.0,
+    "edge_width_angstrom": 6.0,
+    "projectile_radius_angstrom": 10.0,
+    "projectile_gap_angstrom": 20.0,
+    "temperature_K": 300.0,
+    "timestep_ps": 0.0001,
+    "relax_ps": 0.20,
+    "recovery_ps": 5.0,
+    "track_every_steps": 100,
+    "trajectory_every_steps": 200,
+    "trajectory_enabled": true,
+    "termination_cutoff_angstrom": 10.5,
+    "plateau_window_ps": 0.50,
+    "plateau_vz_sd_mps": 50.0,
+    "bond_distance_cutoffs_angstrom": [1.75, 1.85, 1.95],
+    "local_gap_radius_angstrom": 15.0
+  },
+  "lj_tail": {
+    "epsilon_eV": 0.00284,
+    "sigma_angstrom": 3.40,
+    "cutoff_angstrom": 10.20,
+    "inner_off_angstrom": 1.90,
+    "inner_on_angstrom": 2.50,
+    "grid_points": 20000
+  },
+  "screen": {
+    "velocities_mps": [8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000],
+    "seeds": [31001],
+    "impact_offsets_angstrom": [[0.0, 0.0]]
+  },
+  "threshold": {
+    "replicates": 10,
+    "seed_start": 41001,
+    "impact_offsets_angstrom": [[0.0,0.0],[0.6,0.0],[-0.6,0.0],[0.0,0.6],[0.0,-0.6],[0.42,0.42],[-0.42,0.42],[0.42,-0.42],[-0.42,-0.42],[0.9,0.3]],
+    "refine_half_width_mps": 500,
+    "refine_step_mps": 250
+  },
+  "mechanism": {
+    "velocity_mps": 12000,
+    "seeds": [51001, 51002, 51003, 51004, 51005],
+    "impact_offsets_angstrom": [[0.0,0.0],[0.6,0.0],[-0.6,0.0],[0.0,0.6],[0.0,-0.6]]
+  },
+  "convergence": {
+    "velocity_mps": 12000,
+    "seeds": [61001, 61002, 61003],
+    "impact_offsets_angstrom": [[0.0,0.0],[0.6,0.0],[-0.6,0.0]],
+    "sheet_sizes_angstrom": [50.0, 60.0, 80.0],
+    "edge_widths_angstrom": [3.0, 6.0, 9.0],
+    "timesteps_ps": [0.00005, 0.00010, 0.00020],
+    "recovery_ps": [3.0, 5.0, 7.0],
+    "lj_epsilons_eV": [0.00200, 0.00284, 0.00400],
+    "lj_sigmas_angstrom": [3.30, 3.40, 3.50],
+    "reactive_models": ["rebo", "airebo_rebo_only"]
+  }
+}

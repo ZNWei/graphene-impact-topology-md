@@ -1,0 +1,71 @@
+# Generated base state; do not edit by hand. campaign=multilayer_graphene_q1_mechanism_p1_p4
+clear
+units metal
+dimension 3
+boundary p p f
+atom_style full
+newton on
+comm_modify cutoff 20.0
+
+variable a equal 2.46
+variable b equal v_a*sqrt(3.0)
+variable sheet equal 60
+variable boxxy equal 100
+variable zhalf equal 1000
+variable d equal 3.35
+variable sxlo equal (v_boxxy-v_sheet)/2.0
+variable sxhi equal (v_boxxy+v_sheet)/2.0
+region sim block 0 ${boxxy} 0 ${boxxy} -${zhalf} ${zhalf} units box
+create_box 4 sim
+lattice custom 1.0 a1 ${a} 0 0 a2 0 ${b} 0 a3 0 0 100.0 basis 0 0 0 basis 0.5 0.166667 0 basis 0.5 0.5 0 basis 0 0.666667 0
+region layer block ${sxlo} ${sxhi} ${sxlo} ${sxhi} -0.5 0.5 units box
+create_atoms 1 region layer
+group l1 type 1
+displace_atoms l1 move 0 0 -${d} units box
+lattice custom 1.0 a1 ${a} 0 0 a2 0 ${b} 0 a3 0 0 100.0 basis 0 0 0 basis 0.5 0.166667 0 basis 0.5 0.5 0 basis 0 0.666667 0 origin 0.5 0.166667 0
+create_atoms 2 region layer
+lattice custom 1.0 a1 ${a} 0 0 a2 0 ${b} 0 a3 0 0 100.0 basis 0 0 0 basis 0.5 0.166667 0 basis 0.5 0.5 0 basis 0 0.666667 0
+create_atoms 3 region layer
+group l3 type 3
+displace_atoms l3 move 0 0 ${d} units box
+variable cx equal v_boxxy/2.0+-0.6
+variable cy equal v_boxxy/2.0+0
+variable cz equal v_d+30
+region projectile_sphere sphere ${cx} ${cy} ${cz} 10 units box
+lattice custom 1.0 a1 ${a} 0 0 a2 0 ${b} 0 a3 0 0 6.70 basis 0 0 0 basis 0.5 0.166667 0 basis 0.5 0.5 0 basis 0 0.666667 0 basis 0.5 0.166667 0.5 basis 0 0.333333 0.5 basis 0 0.666667 0.5 basis 0.5 0.833333 0.5
+create_atoms 4 region projectile_sphere
+lattice none 1.0
+mass * 12.0107
+group target type 1 2 3
+group projectile type 4
+
+pair_style hybrid/overlay rebo zbl 0.95 1.00 kolmogorov/crespi/z 16.0
+pair_coeff * * rebo potentials/CH.rebo C C C C
+pair_coeff * * zbl 6.0 6.0
+pair_coeff 1 2 kolmogorov/crespi/z potentials/CC.KC C C C NULL
+pair_coeff 2 3 kolmogorov/crespi/z potentials/CC.KC C C C NULL
+pair_coeff 1 3 kolmogorov/crespi/z potentials/CC.KC C C C NULL
+neighbor 2.0 bin
+neigh_modify every 1 delay 0 check yes one 10000
+timestep 0.0001
+velocity target create 300 61003 dist gaussian mom yes rot yes
+velocity projectile create 300 161006 dist gaussian mom yes rot yes
+velocity projectile zero linear
+fix eqt target nvt temp 300 300 0.02
+fix eqp projectile nvt temp 300 300 0.02
+thermo 100
+thermo_style custom step time temp etotal
+run 2000
+unfix eqt
+unfix eqp
+variable ew equal 6
+region ex1 block ${sxlo} $(v_sxlo+v_ew) INF INF INF INF units box
+region ex2 block $(v_sxhi-v_ew) ${sxhi} INF INF INF INF units box
+region ey1 block INF INF ${sxlo} $(v_sxlo+v_ew) INF INF units box
+region ey2 block INF INF $(v_sxhi-v_ew) ${sxhi} INF INF units box
+region edges union 4 ex1 ex2 ey1 ey2
+group edge_raw region edges
+group edge intersect edge_raw target
+velocity edge set 0 0 0
+write_data generated/base/base_b78e6c45af6c.data
+print "BASE_COMPLETE base_b78e6c45af6c" file generated/base/base_b78e6c45af6c.status

@@ -1,0 +1,19 @@
+# Portable NVT equilibration and edge-velocity zeroing, unchanged dynamics.
+fix eqt target nvt temp 300 300 0.02
+fix eqp projectile nvt temp 300 300 0.02
+thermo 100
+thermo_style custom step time temp etotal
+run 2000
+unfix eqt
+unfix eqp
+variable ew equal 6
+region ex1 block ${sxlo} $(v_sxlo+v_ew) INF INF INF INF units box
+region ex2 block $(v_sxhi-v_ew) ${sxhi} INF INF INF INF units box
+region ey1 block INF INF ${sxlo} $(v_sxlo+v_ew) INF INF units box
+region ey2 block INF INF $(v_sxhi-v_ew) ${sxhi} INF INF units box
+region edges union 4 ex1 ex2 ey1 ey2
+group edge_raw region edges
+group edge intersect edge_raw target
+velocity edge set 0 0 0
+write_data ${base_output}
+print "BASE_COMPLETE base_8afa52e24f52" file ${base_status}
